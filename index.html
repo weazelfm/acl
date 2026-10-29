@@ -4,7 +4,7 @@
 <link rel="icon" type="image/png" href="/acl-logo.png">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>APEX COMBAT LEAGUE — MMA em Los Santos</title>
+<title>APEX COMBAT LEAGUE</title>
 <meta name="acl-ui-revision" content="live-hub-media-desk-v1-2026-10-27">
 <link rel="icon" type="image/png" href="./acl-favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -2092,7 +2092,7 @@ function decimalOdds(prob,margin=.065){const p=clamp(Number(prob)||0.001,.001,.9
 function oddsPercent(prob){return `${(clamp(Number(prob)||0,0,1)*100).toFixed(1)}%`;}
 function fightForecast(e,f,c){
  const a=byId(f.a),b=byId(f.b);if(!a||!b)return null;
- const sa=forecastSkill(a,c),sb=forecastSkill(b,c),delta=clamp((sa-sb)/8.5,-4,4);
+ const sa=forecastSkill(a,c),sb=forecastSkill(b,c),delta=.50*Math.tanh((sa-sb)/30.0);
  // Mercado binário de vencedor: dois resultados possíveis, sem empate ou método.
  const winA=1/(1+Math.exp(-delta)),winB=1-winA;
  const avA=fighterAvailabilityForDate(a,e.date),avB=fighterAvailabilityForDate(b,e.date);
