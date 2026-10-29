@@ -2092,7 +2092,7 @@ function decimalOdds(prob,margin=.065){const p=clamp(Number(prob)||0.001,.001,.9
 function oddsPercent(prob){return `${(clamp(Number(prob)||0,0,1)*100).toFixed(1)}%`;}
 function fightForecast(e,f,c){
  const a=byId(f.a),b=byId(f.b);if(!a||!b)return null;
- const sa=forecastSkill(a,c),sb=forecastSkill(b,c),delta=.50*Math.tanh((sa-sb)/30.0);
+ const sa=forecastSkill(a,c),sb=forecastSkill(b,c),delta=.52*Math.tanh((sa-sb)/18.0);
  // Mercado binário de vencedor: dois resultados possíveis, sem empate ou método.
  const winA=1/(1+Math.exp(-delta)),winB=1-winA;
  const avA=fighterAvailabilityForDate(a,e.date),avB=fighterAvailabilityForDate(b,e.date);
