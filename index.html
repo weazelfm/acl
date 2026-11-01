@@ -4,8 +4,8 @@
 <link rel="icon" type="image/png" href="/acl-logo.png">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>APEX COMBAT LEAGUE</title>
-<meta name="acl-ui-revision" content="live-hub-media-desk-v1-2026-10-27">
+<title>APEX COMBAT LEAGUE — MMA em Los Santos</title>
+<meta name="acl-ui-revision" content="live-hub-media-desk-artwork-fix-v2-2026-11-01">
 <link rel="icon" type="image/png" href="./acl-favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1694,32 +1694,82 @@ function posterText(ctx,text,x,y,maxWidth,lineHeight,maxLines=2,align='left'){
 function posterRoundRect(ctx,x,y,w,h,r,fill,stroke){ctx.beginPath();ctx.moveTo(x+r,y);ctx.arcTo(x+w,y,x+w,y+h,r);ctx.arcTo(x+w,y+h,x,y+h,r);ctx.arcTo(x,y+h,x,y,r);ctx.arcTo(x,y,x+w,y,r);ctx.closePath();if(fill){ctx.fillStyle=fill;ctx.fill();}if(stroke){ctx.strokeStyle=stroke;ctx.lineWidth=2;ctx.stroke();}}
 function posterFighterLine(f){return nameWithNick(f);}
 function promoFightPriority(f){const s=String(f.slot||'').toLowerCase();if(s.includes('prelim'))return 0;if(s.includes('card principal'))return 1;if(s.includes('co-main')||s.includes('co main'))return 2;if(s.includes('luta principal')||s.includes('main event'))return 3;return 1;}
+const ACL_ISO_COUNTRY_CODES=['AD', 'AE', 'AF', 'AG', 'AI', 'AL', 'AM', 'AO', 'AQ', 'AR', 'AS', 'AT', 'AU', 'AW', 'AX', 'AZ', 'BA', 'BB', 'BD', 'BE', 'BF', 'BG', 'BH', 'BI', 'BJ', 'BL', 'BM', 'BN', 'BO', 'BQ', 'BR', 'BS', 'BT', 'BV', 'BW', 'BY', 'BZ', 'CA', 'CC', 'CD', 'CF', 'CG', 'CH', 'CI', 'CK', 'CL', 'CM', 'CN', 'CO', 'CR', 'CU', 'CV', 'CW', 'CX', 'CY', 'CZ', 'DE', 'DJ', 'DK', 'DM', 'DO', 'DZ', 'EC', 'EE', 'EG', 'EH', 'ER', 'ES', 'ET', 'FI', 'FJ', 'FK', 'FM', 'FO', 'FR', 'GA', 'GB', 'GD', 'GE', 'GF', 'GG', 'GH', 'GI', 'GL', 'GM', 'GN', 'GP', 'GQ', 'GR', 'GS', 'GT', 'GU', 'GW', 'GY', 'HK', 'HM', 'HN', 'HR', 'HT', 'HU', 'ID', 'IE', 'IL', 'IM', 'IN', 'IO', 'IQ', 'IR', 'IS', 'IT', 'JE', 'JM', 'JO', 'JP', 'KE', 'KG', 'KH', 'KI', 'KM', 'KN', 'KP', 'KR', 'KW', 'KY', 'KZ', 'LA', 'LB', 'LC', 'LI', 'LK', 'LR', 'LS', 'LT', 'LU', 'LV', 'LY', 'MA', 'MC', 'MD', 'ME', 'MF', 'MG', 'MH', 'MK', 'ML', 'MM', 'MN', 'MO', 'MP', 'MQ', 'MR', 'MS', 'MT', 'MU', 'MV', 'MW', 'MX', 'MY', 'MZ', 'NA', 'NC', 'NE', 'NF', 'NG', 'NI', 'NL', 'NO', 'NP', 'NR', 'NU', 'NZ', 'OM', 'PA', 'PE', 'PF', 'PG', 'PH', 'PK', 'PL', 'PM', 'PN', 'PR', 'PS', 'PT', 'PW', 'PY', 'QA', 'RE', 'RO', 'RS', 'RU', 'RW', 'SA', 'SB', 'SC', 'SD', 'SE', 'SG', 'SH', 'SI', 'SJ', 'SK', 'SL', 'SM', 'SN', 'SO', 'SR', 'SS', 'ST', 'SV', 'SX', 'SY', 'SZ', 'TC', 'TD', 'TF', 'TG', 'TH', 'TJ', 'TK', 'TL', 'TM', 'TN', 'TO', 'TR', 'TT', 'TV', 'TW', 'TZ', 'UA', 'UG', 'UM', 'US', 'UY', 'UZ', 'VA', 'VC', 'VE', 'VG', 'VI', 'VN', 'VU', 'WF', 'WS', 'YE', 'YT', 'ZA', 'ZM', 'ZW'];
+const ACL_COUNTRY_NORMALIZE=value=>String(value||'').toLocaleLowerCase('pt-BR').normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,' ').trim();
+const ACL_COUNTRY_ALIASES={
+ AZ:['azerbaijao','azerbaijan','azerbaijani','baku'],
+ GB:['reino unido','united kingdom','great britain','britain','england','scotland','wales','northern ireland','london','manchester','liverpool'],
+ US:['estados unidos','united states','united states of america','usa','u s a','america','new york','los angeles','las vegas','miami','chicago','texas','california'],
+ CA:['canada','canadian','toronto','montreal','vancouver','quebec','ottawa'],
+ MX:['mexico','mexico city','tijuana','guadalajara','monterrey','cdmx'],
+ JP:['japao','japan','osaka','tokyo','kyoto','hiroshima'],
+ NZ:['nova zelandia','new zealand','auckland','wellington','christchurch'],
+ PT:['portugal','lisboa','lisbon','porto','coimbra'],
+ BR:['brasil','brazil','sao paulo','rio de janeiro','curitiba','porto alegre','belo horizonte','manaus','salvador','recife','fortaleza'],
+ IE:['irlanda','ireland','dublin','cork'], FR:['franca','france','paris','lyon','marseille'],
+ DE:['alemanha','germany','berlin','munich','hamburg'], IT:['italia','italy','rome','roma','milan','milao','naples'],
+ ES:['espanha','spain','madrid','barcelona','valencia'], AR:['argentina','buenos aires','cordoba argentina'],
+ CO:['colombia','bogota','medellin'], RU:['russia','moscow','moscou','st petersburg'],
+ AU:['australia','sydney','melbourne','brisbane','perth'], ZA:['africa do sul','south africa','cape town','johannesburg'],
+ KR:['coreia do sul','south korea','seoul','busan'], IN:['india','mumbai','delhi','new delhi','bengaluru'],
+ SE:['suecia','sweden','stockholm','gothenburg'], NG:['nigeria','lagos','abuja'], PL:['polonia','poland','warsaw','varsovia'],
+ KP:['coreia do norte','north korea'], CZ:['republica tcheca','czechia','czech republic'],
+ CI:['costa do marfim','ivory coast'], CD:['republica democratica do congo','dr congo'],
+ CG:['republica do congo','republic of the congo'], BO:['bolivia'], VE:['venezuela'], TZ:['tanzania'],
+ TR:['turquia','turkey'], NL:['holanda','netherlands','amsterdam'], AE:['emirados arabes unidos','uae'],
+ MK:['macedonia do norte','north macedonia'], PS:['palestina','palestine'], VA:['vaticano','vatican city'],
+ BN:['brunei'], LA:['laos'], MD:['moldavia','moldova'], SZ:['eswatini','suazilandia'],
+ MM:['myanmar','birmania'], IR:['ira','iran'], SY:['siria','syria'], TW:['taiwan']
+};
+const ACL_COUNTRY_MATCHES=(()=>{
+ const matches=[];
+ let ptNames=null,enNames=null;
+ try{ptNames=new Intl.DisplayNames(['pt-BR'],{type:'region'});enNames=new Intl.DisplayNames(['en'],{type:'region'});}catch{}
+ for(const code of ACL_ISO_COUNTRY_CODES){
+  let pt='',en='';
+  try{pt=ptNames?.of(code)||'';en=enNames?.of(code)||'';}catch{}
+  if(pt&&pt!==code)matches.push({code,name:pt,match:ACL_COUNTRY_NORMALIZE(pt)});
+  if(en&&en!==code&&ACL_COUNTRY_NORMALIZE(en)!==ACL_COUNTRY_NORMALIZE(pt))matches.push({code,name:pt||en,match:ACL_COUNTRY_NORMALIZE(en)});
+ }
+ for(const [code,values] of Object.entries(ACL_COUNTRY_ALIASES))for(const value of values)matches.push({code,name:value,match:ACL_COUNTRY_NORMALIZE(value)});
+ const unique=new Map();
+ for(const item of matches)if(item.match&&!unique.has(item.code+'|'+item.match))unique.set(item.code+'|'+item.match,{...item,re:new RegExp('(^| )'+item.match.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+'( |$)')});
+ return [...unique.values()].sort((a,b)=>b.match.length-a.match.length);
+})();
+const ACL_COUNTRY_PRIMARY_NAMES=new Map(ACL_COUNTRY_MATCHES.map(item=>[item.code,item.name]));
 function fighterCountryInfo(f){
- const norm=v=>String(v||'').toLocaleLowerCase('pt-BR').normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,' ').trim();
  const explicit=String(f?.countryCode||f?.nationalityCode||'').trim().toUpperCase();
- const valid=new Set(['AD', 'AE', 'AF', 'AG', 'AI', 'AL', 'AM', 'AO', 'AQ', 'AR', 'AS', 'AT', 'AU', 'AW', 'AX', 'AZ', 'BA', 'BB', 'BD', 'BE', 'BF', 'BG', 'BH', 'BI', 'BJ', 'BL', 'BM', 'BN', 'BO', 'BQ', 'BR', 'BS', 'BT', 'BV', 'BW', 'BY', 'BZ', 'CA', 'CC', 'CD', 'CF', 'CG', 'CH', 'CI', 'CK', 'CL', 'CM', 'CN', 'CO', 'CR', 'CU', 'CV', 'CW', 'CX', 'CY', 'CZ', 'DE', 'DJ', 'DK', 'DM', 'DO', 'DZ', 'EC', 'EE', 'EG', 'EH', 'ER', 'ES', 'ET', 'FI', 'FJ', 'FK', 'FM', 'FO', 'FR', 'GA', 'GB', 'GD', 'GE', 'GF', 'GG', 'GH', 'GI', 'GL', 'GM', 'GN', 'GP', 'GQ', 'GR', 'GS', 'GT', 'GU', 'GW', 'GY', 'HK', 'HM', 'HN', 'HR', 'HT', 'HU', 'ID', 'IE', 'IL', 'IM', 'IN', 'IO', 'IQ', 'IR', 'IS', 'IT', 'JE', 'JM', 'JO', 'JP', 'KE', 'KG', 'KH', 'KI', 'KM', 'KN', 'KP', 'KR', 'KW', 'KY', 'KZ', 'LA', 'LB', 'LC', 'LI', 'LK', 'LR', 'LS', 'LT', 'LU', 'LV', 'LY', 'MA', 'MC', 'MD', 'ME', 'MF', 'MG', 'MH', 'MK', 'ML', 'MM', 'MN', 'MO', 'MP', 'MQ', 'MR', 'MS', 'MT', 'MU', 'MV', 'MW', 'MX', 'MY', 'MZ', 'NA', 'NC', 'NE', 'NF', 'NG', 'NI', 'NL', 'NO', 'NP', 'NR', 'NU', 'NZ', 'OM', 'PA', 'PE', 'PF', 'PG', 'PH', 'PK', 'PL', 'PM', 'PN', 'PR', 'PS', 'PT', 'PW', 'PY', 'QA', 'RE', 'RO', 'RS', 'RU', 'RW', 'SA', 'SB', 'SC', 'SD', 'SE', 'SG', 'SH', 'SI', 'SJ', 'SK', 'SL', 'SM', 'SN', 'SO', 'SR', 'SS', 'ST', 'SV', 'SX', 'SY', 'SZ', 'TC', 'TD', 'TF', 'TG', 'TH', 'TJ', 'TK', 'TL', 'TM', 'TN', 'TO', 'TR', 'TT', 'TV', 'TW', 'TZ', 'UA', 'UG', 'UM', 'US', 'UY', 'UZ', 'VA', 'VC', 'VE', 'VG', 'VI', 'VN', 'VU', 'WF', 'WS', 'YE', 'YT', 'ZA', 'ZM', 'ZW']);
- if(valid.has(explicit)){let name=explicit;try{name=new Intl.DisplayNames(['pt-BR'],{type:'region'}).of(explicit)||explicit;}catch{}return {code:explicit,name};}
- const raw=norm([f?.origin,f?.nationality,f?.country,f?.base].filter(Boolean).join(' | '));
- const aliases={'AZ':['azerbaijao','azerbaijan','azerbaijani','baku'],'GB':['reino unido','united kingdom','great britain','england','scotland','wales','northern ireland'],'US':['estados unidos','united states','usa','u s a'],'KR':['coreia do sul','south korea'],'KP':['coreia do norte','north korea'],'CZ':['republica tcheca','czechia','czech republic'],'CI':['costa do marfim','ivory coast'],'CD':['republica democratica do congo','dr congo'],'CG':['republica do congo','republic of the congo'],'BO':['bolivia'],'VE':['venezuela'],'TZ':['tanzania'],'RU':['russia'],'TR':['turquia','turkey'],'NL':['holanda','netherlands'],'AE':['emirados arabes unidos','uae'],'MK':['macedonia do norte','north macedonia'],'PS':['palestina','palestine'],'VA':['vaticano','vatican city'],'BN':['brunei'],'LA':['laos'],'MD':['moldavia','moldova'],'SZ':['eswatini','suazilandia'],'MM':['myanmar','birmania'],'IR':['ira'],'SY':['siria'],'TW':['taiwan']};
- const names=[];
- for(const code of valid){let pt='',en='';try{pt=new Intl.DisplayNames(['pt-BR'],{type:'region'}).of(code)||'';en=new Intl.DisplayNames(['en'],{type:'region'}).of(code)||'';}catch{}if(pt)names.push({code,name:pt,match:norm(pt)});if(en&&norm(en)!==norm(pt))names.push({code,name:pt||en,match:norm(en)});}
- for(const [code,values] of Object.entries(aliases))for(const value of values)names.push({code,name:value,match:norm(value)});
- names.sort((a,b)=>b.match.length-a.match.length);
- for(const item of names){const escaped=item.match.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');if(escaped&&new RegExp('(^| )'+escaped+'( |$)').test(raw))return {code:item.code,name:item.name};}
+ if(/^[A-Z]{2}$/.test(explicit)&&ACL_ISO_COUNTRY_CODES.includes(explicit))return {code:explicit,name:ACL_COUNTRY_PRIMARY_NAMES.get(explicit)||explicit};
+ const raw=ACL_COUNTRY_NORMALIZE([f?.origin,f?.nationality,f?.country,f?.base].filter(Boolean).join(' | '));
+ for(const item of ACL_COUNTRY_MATCHES)if(item.re.test(raw))return {code:item.code,name:item.name};
  return {code:'',name:''};
 }
 function posterDrawFlag(ctx,f,x,y,w,h){
  const code=String(f?.code||'').toUpperCase();
- ctx.save();ctx.beginPath();ctx.rect(x,y,w,h);ctx.clip();ctx.fillStyle='#fff';ctx.fillRect(x,y,w,h);
+ ctx.save();
+ posterRoundRect(ctx,x,y,w,h,Math.min(5,h*.16),'rgba(7,11,16,.94)','rgba(214,182,106,.72)');
+ ctx.beginPath();ctx.rect(x+2,y+2,Math.max(0,w-4),Math.max(0,h-4));ctx.clip();
+ ctx.fillStyle='#f7f8fa';ctx.fillRect(x+2,y+2,Math.max(0,w-4),Math.max(0,h-4));
  if(/^[A-Z]{2}$/.test(code)){
   const emoji=String.fromCodePoint(...[...code].map(ch=>0x1F1E6+ch.charCodeAt(0)-65));
-  ctx.textAlign='center';ctx.textBaseline='middle';ctx.font=`${Math.max(12,h*1.12)}px "Apple Color Emoji","Segoe UI Emoji","Noto Color Emoji",sans-serif`;
+  ctx.textAlign='center';ctx.textBaseline='middle';
+  ctx.font=`${Math.max(12,Math.min(h*.94,w*.78))}px "Apple Color Emoji","Segoe UI Emoji","Noto Color Emoji",sans-serif`;
   ctx.fillText(emoji,x+w/2,y+h/2+1);
  }else{
-  ctx.fillStyle='#667085';ctx.font=`700 ${Math.max(8,h*.45)}px Arial`;ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillText('—',x+w/2,y+h/2);
+  ctx.fillStyle='#657181';ctx.textAlign='center';ctx.textBaseline='middle';ctx.font=`800 ${Math.max(8,h*.40)}px Inter,Arial,sans-serif`;
+  ctx.fillText('ACL',x+w/2,y+h/2+1);
  }
- ctx.strokeStyle='rgba(15,23,42,.22)';ctx.lineWidth=1;ctx.strokeRect(x+.5,y+.5,Math.max(0,w-1),Math.max(0,h-1));ctx.restore();
-}function renderPromoImage(){
+ ctx.restore();
+}
+const ACL_PROMO_LOGO=new Image();
+ACL_PROMO_LOGO.decoding='async';
+ACL_PROMO_LOGO.onload=()=>{
+ if(activeView==='promo')requestAnimationFrame(renderPromoImage);
+ if(document.querySelector('[data-media-poster]'))requestAnimationFrame(renderMediaPosterPreviews);
+};
+ACL_PROMO_LOGO.onerror=()=>console.warn('ACL logo asset could not be loaded; the poster renderer will use its text fallback.');
+ACL_PROMO_LOGO.src='./acl-logo.png';
+function renderPromoImage(){
  const canvas=$('promoCanvas');if(!canvas)return;
  const e=eventById($('promoEventSelect')?.value||promoEventId)||pickPromoEvent();if(!e)return;
  const ctx=canvas.getContext('2d');if(!ctx)return;const W=1080,H=1350;ctx.clearRect(0,0,W,H);
@@ -1746,24 +1796,35 @@ function posterDrawFlag(ctx,f,x,y,w,h){
  let main=fights.find(f=>{const slot=String(f.slot||'').toLowerCase().trim();return slot.includes('luta principal')||(slot.includes('main event')&&!slot.includes('co-main'));})||fights[fights.length-1]||null;
  const rest=fights.filter(f=>f!==main).sort((a,b)=>promoFightPriority(a)-promoFightPriority(b));
  // Main event block.
- const mainH=300;posterRoundRect(ctx,55,y,970,mainH,17,'rgba(10,15,22,.88)','#46515d');
- ctx.fillStyle='#c9a45c';ctx.fillRect(55,y,970,7);
- ctx.font='900 16px Arial,Helvetica,sans-serif';ctx.fillStyle='#ead08c';ctx.textAlign='center';ctx.fillText(main?(main.title?'DISPUTA DE CINTURÃO · LUTA PRINCIPAL':'LUTA PRINCIPAL'):'CARD EM CONSTRUÇÃO',540,y+40);
- if(main){const a=byId(main.a),b=byId(main.b);const cx=540,baseY=y+104;const maxLen=Math.max(posterFighterLine(a).length,posterFighterLine(b).length);const nameFont=Math.max(21,Math.min(29,Math.floor(620/Math.max(1,maxLen)*1.25)));
-  posterDrawFlag(ctx,fighterCountryInfo(a),250,y+52,50,30);posterDrawFlag(ctx,fighterCountryInfo(b),780,y+52,50,30);
-  ctx.font=`900 ${nameFont}px Arial,Helvetica,sans-serif`;ctx.fillStyle='#ffffff';posterText(ctx,posterFighterLine(a).toUpperCase(),275,y+119,390,28,2,'center');posterText(ctx,posterFighterLine(b).toUpperCase(),805,y+119,390,28,2,'center');
-  ctx.font='italic 1000 43px Arial,Helvetica,sans-serif';ctx.fillStyle='#f2f5f7';ctx.fillText('VS',cx,y+194);
-  ctx.font='700 18px Arial,Helvetica,sans-serif';ctx.fillStyle='#9cabb9';ctx.fillText(recordText(recalculate().records[a.id]||a.baseRecord||{w:0,l:0,d:0}),275,y+235);ctx.fillText(recordText(recalculate().records[b.id]||b.baseRecord||{w:0,l:0,d:0}),805,y+235);
-  ctx.font='800 17px Arial,Helvetica,sans-serif';ctx.fillStyle='#c9a45c';ctx.fillText(`${divObj(main.division).label.toUpperCase()}${main.title?'  ·  CINTURÃO EM JOGO':''}`,cx,y+273);
- }else{ctx.font='700 22px Arial,Helvetica,sans-serif';ctx.fillStyle='#aab6c2';ctx.fillText('Os confrontos serão anunciados em breve',540,y+150);}
- y+=mainH+32;
+ const mainH=344;posterRoundRect(ctx,55,y,970,mainH,17,'rgba(10,15,22,.92)','#596575');
+ ctx.fillStyle='#c9a45c';ctx.fillRect(55,y,970,6);
+ ctx.font='900 15px Arial,Helvetica,sans-serif';ctx.fillStyle='#ead08c';ctx.textAlign='center';ctx.fillText(main?(main.title?'DISPUTA DE CINTURÃO  /  LUTA PRINCIPAL':'LUTA PRINCIPAL'):'CARD EM CONSTRUÇÃO',540,y+37);
+ if(main){
+  const a=byId(main.a),b=byId(main.b),cx=540,pw=390,ph=172,py=y+57,lx=78,rx=612;
+  requestPosterPhoto(a);requestPosterPhoto(b);
+  posterDrawImageCrop(ctx,loadedPosterPhoto(a),lx,py,pw,ph,10);
+  posterDrawImageCrop(ctx,loadedPosterPhoto(b),rx,py,pw,ph,10);
+  ctx.fillStyle='rgba(240,68,86,.9)';ctx.fillRect(lx,py,pw,4);
+  ctx.fillStyle='rgba(57,135,255,.95)';ctx.fillRect(rx,py,pw,4);
+  posterDrawFlag(ctx,fighterCountryInfo(a),lx+12,py+12,42,27);
+  posterDrawFlag(ctx,fighterCountryInfo(b),rx+pw-54,py+12,42,27);
+  ctx.save();ctx.shadowColor='rgba(0,0,0,.55)';ctx.shadowBlur=18;ctx.beginPath();ctx.arc(cx,py+ph*.54,43,0,Math.PI*2);ctx.fillStyle='#090d13';ctx.fill();ctx.strokeStyle='#d6b66a';ctx.lineWidth=2.5;ctx.stroke();ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillStyle='#f6f3ea';ctx.font='italic 1000 29px Arial,Helvetica,sans-serif';ctx.fillText('VS',cx,py+ph*.54+1);ctx.restore();
+  const na=posterFighterLine(a).toUpperCase(),nb=posterFighterLine(b).toUpperCase();
+  const fitName=(name,max)=>{let size=26;ctx.font=`900 ${size}px Arial,Helvetica,sans-serif`;while(ctx.measureText(name).width>max&&size>16){size--;ctx.font=`900 ${size}px Arial,Helvetica,sans-serif`;}return size;};
+  ctx.textAlign='left';ctx.fillStyle='#fff';ctx.font=`900 ${fitName(na,pw-24)}px Arial,Helvetica,sans-serif`;posterText(ctx,na,lx+8,y+259,pw-24,25,1,'left');
+  ctx.textAlign='left';ctx.fillStyle='#fff';ctx.font=`900 ${fitName(nb,pw-24)}px Arial,Helvetica,sans-serif`;posterText(ctx,nb,rx+8,y+259,pw-24,25,1,'left');
+  const rec=recalculate().records;ctx.font='700 15px Arial,Helvetica,sans-serif';ctx.fillStyle='#aab6c2';ctx.textAlign='left';ctx.fillText(recordText(rec[a.id]||a.baseRecord||{w:0,l:0,d:0}),lx+8,y+284);ctx.fillText('CANTO VERMELHO',lx+8,y+310);
+  ctx.textAlign='left';ctx.fillText(recordText(rec[b.id]||b.baseRecord||{w:0,l:0,d:0}),rx+8,y+284);ctx.fillText('CANTO AZUL',rx+8,y+310);
+  ctx.font='800 16px Arial,Helvetica,sans-serif';ctx.fillStyle='#d6b66a';ctx.textAlign='center';ctx.fillText(`${divObj(main.division).label.toUpperCase()}${main.title?'  ·  CINTURÃO EM JOGO':''}`,cx,y+333);
+ }else{ctx.font='700 22px Arial,Helvetica,sans-serif';ctx.fillStyle='#aab6c2';ctx.fillText('Os confrontos serão anunciados em breve',540,y+175);}
+ y+=mainH+30;
  // Fight card list; fit every scheduled matchup.
  ctx.textAlign='left';ctx.font='900 18px Arial,Helvetica,sans-serif';ctx.fillStyle='#ead08c';ctx.fillText('O CARD COMPLETO',68,y+2);y+=20;
- if(rest.length){const bottom=H-105;const space=Math.max(30,bottom-y);const rowH=Math.min(61,Math.max(31,space/rest.length));const fontSize=Math.max(14,Math.min(20,rowH>=48?19:16));
-  rest.forEach((f,i)=>{const yy=y+i*rowH;const a=byId(f.a),b=byId(f.b);if(yy+rowH>bottom+2)return;
+ if(rest.length){const bottom=H-105;const space=Math.max(24,bottom-y);const rowH=Math.min(61,space/rest.length);const fontSize=Math.max(10,Math.min(18,rowH>=42?17:Math.floor(rowH*.42)));
+  rest.forEach((f,i)=>{const yy=y+i*rowH;const a=byId(f.a),b=byId(f.b);
    if(i%2===0)posterRoundRect(ctx,62,yy+2,956,rowH-3,7,'rgba(255,255,255,.035)',null);
    ctx.fillStyle='#718092';ctx.font='800 13px Arial,Helvetica,sans-serif';ctx.textAlign='left';ctx.fillText(String(i+1).padStart(2,'0'),78,yy+rowH/2+5);
-   const flagH=Math.min(16,rowH*.42),flagW=flagH*1.65,flagY=yy+(rowH-flagH)/2;
+   const flagH=Math.min(16,Math.max(9,rowH*.42)),flagW=flagH*1.65,flagY=yy+(rowH-flagH)/2;
    posterDrawFlag(ctx,fighterCountryInfo(a),122,flagY,flagW,flagH);
    ctx.font=`800 ${fontSize}px Arial,Helvetica,sans-serif`;ctx.fillStyle='#eff3f7';posterText(ctx,posterFighterLine(a),122+flagW+7,yy+rowH/2+6,315,Math.max(16,fontSize),1,'left');
    ctx.textAlign='center';ctx.font='italic 900 12px Arial,Helvetica,sans-serif';ctx.fillStyle='#9baaba';ctx.fillText('VS',540,yy+rowH/2+5);
@@ -2345,7 +2406,7 @@ function requestPosterPhoto(f){
  const existing=aclPosterPhotoCache.get(url);if(existing)return existing.promise;
  const image=new Image();image.crossOrigin='anonymous';
  const record={image,promise:null};
- record.promise=new Promise(resolve=>{image.onload=()=>{resolve(image);document.querySelectorAll('[data-media-poster]').forEach(canvas=>{const item=mediaItems.find(x=>String(x.id)===String(canvas.dataset.mediaPoster));if(item)drawMediaPoster(canvas,item);});};image.onerror=()=>resolve(null);});
+ record.promise=new Promise(resolve=>{image.onload=()=>{resolve(image);document.querySelectorAll('[data-media-poster]').forEach(canvas=>{const item=mediaItems.find(x=>String(x.id)===String(canvas.dataset.mediaPoster));if(item)drawMediaPoster(canvas,item);});if(activeView==='promo')requestAnimationFrame(renderPromoImage);};image.onerror=()=>resolve(null);});
  aclPosterPhotoCache.set(url,record);image.src=url;return record.promise;
 }
 function loadedPosterPhoto(f){const record=f?.photoUrl?aclPosterPhotoCache.get(String(f.photoUrl).trim()):null;return record?.image?.complete&&record.image.naturalWidth?record.image:null;}
