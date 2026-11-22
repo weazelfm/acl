@@ -1503,6 +1503,247 @@ html.acl-live-open,body.acl-live-open{overflow:hidden!important;height:100dvh!im
 }
 </style>
 
+
+<style id="acl-fight-experience-2-0-2026-11-22">
+/* ACL FIGHT EXPERIENCE 2.0 — legibility, impact, corner break and condition. */
+.live-commentary-column{display:flex!important;flex-direction:column!important;gap:clamp(6px,.75vh,10px)!important;min-height:0!important;min-width:0!important;overflow:hidden!important;padding:clamp(8px,.9vw,13px)!important}
+.live-commentary-compact{flex:0 0 auto!important;grid-template-columns:minmax(84px,110px) minmax(0,1fr)!important;gap:12px!important;padding:clamp(10px,.85vw,14px)!important;margin:0!important;border-radius:10px!important}
+.live-commentary-compact-text,.live-commentary-column .live-commentary-compact-text{display:block!important;-webkit-box-orient:initial!important;-webkit-line-clamp:unset!important;line-clamp:unset!important;overflow:visible!important;white-space:normal!important;text-overflow:clip!important;font-size:clamp(12px,.95vw,15px)!important;line-height:1.55!important;letter-spacing:.005em!important;color:#f0f3f6!important;margin:0!important;max-height:none!important}
+.live-commentary-compact-head{min-width:0!important;gap:6px!important}
+.live-commentary-compact-kicker{font-size:9px!important;letter-spacing:.13em!important}
+.live-commentary-compact-clock{font-size:11px!important}
+.live-commentary-compact-actor{font-size:9px!important;letter-spacing:.08em!important}
+.live-live-stats{display:flex!important;flex:0 0 auto!important;flex-direction:column!important;gap:8px!important;min-width:0!important}
+.live-live-stat-grid{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:6px!important;min-width:0!important}
+.live-live-stat{min-width:0!important;padding:7px 8px!important}
+.live-live-stat>span{font-size:8px!important;line-height:1.25!important;letter-spacing:.055em!important}
+.live-live-stat-values{font-size:10px!important;gap:3px!important}
+.live-live-stat-values b{font-size:clamp(8px,.72vw,10px)!important}
+.live-stamina-strip{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:8px!important}
+.live-stamina-row{min-width:0!important;padding:7px 9px!important;border:1px solid rgba(184,199,212,.12)!important;border-radius:8px!important;background:rgba(3,8,13,.34)!important}
+.live-stamina-head{display:flex!important;align-items:center!important;justify-content:space-between!important;gap:8px!important;margin-bottom:5px!important}
+.live-stamina-head span{font-size:8px!important;font-weight:900!important;letter-spacing:.07em!important;color:#a9b7c3!important}
+.live-stamina-head strong{font-size:11px!important;font-weight:950!important;font-variant-numeric:tabular-nums!important;color:#eef2f5!important}
+.live-stamina-row.red .live-stamina-head strong{color:#ff8a98!important}.live-stamina-row.blue .live-stamina-head strong{color:#8ebcff!important}
+.live-stamina-track{height:6px!important;border-radius:999px!important;background:#273442!important;overflow:hidden!important}
+.live-stamina-track i{display:block!important;height:100%!important;border-radius:999px!important;background:linear-gradient(90deg,#a93d4b,#ff6d7d)!important;transition:width .35s ease!important}
+.live-stamina-row.blue .live-stamina-track i{background:linear-gradient(90deg,#285fa9,#68a8ff)!important}
+.live-stamina-row[data-stamina-state="low"] .live-stamina-track i{filter:saturate(.72)!important}
+.live-stamina-row small{display:block!important;margin-top:4px!important;font-size:7px!important;font-weight:850!important;letter-spacing:.08em!important;color:#8797a6!important}
+.acl-fan-scorecard{flex:0 0 auto!important;padding:8px 10px!important}
+.acl-fan-scorecard-head{margin-bottom:5px!important}
+.acl-fan-scorecard-rounds{gap:5px!important}
+.acl-fan-score-round{padding:5px!important}
+.acl-fan-score-inputs select{min-height:29px!important;height:29px!important;font-size:9px!important;padding:4px 6px!important}
+.acl-fan-scorecard-note{font-size:7px!important;line-height:1.3!important}
+.live-secondary-drawers{flex:0 0 auto!important;margin-top:auto!important;overflow:visible!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;grid-auto-rows:min-content!important;gap:5px!important}
+.live-fan-scorecard-drawer{grid-column:1/-1!important}
+.live-fan-scorecard-drawer .live-detail-inner{max-height:38vh!important;overflow:auto!important;padding:6px!important}
+.live-commentary-drawer>summary{min-height:35px!important;padding:6px 8px!important}
+.live-commentary-drawer>summary strong{font-size:8px!important}
+.live-commentary-drawer>summary small{font-size:7px!important}
+/* Moment highlights: a short glow on the corner receiving a clean impact. */
+.live-silhouette-stage.impact-on-red .live-silhouette-card.red-corner,.live-silhouette-stage.impact-on-blue .live-silhouette-card.blue-corner{animation:aclCornerImpact .72s ease-out both;border-color:rgba(231,196,126,.78)!important;box-shadow:0 0 0 1px rgba(231,196,126,.14),0 0 28px rgba(231,196,126,.15)!important}
+.live-silhouette-stage.impact-knockdown .live-silhouette-card.red-corner,.live-silhouette-stage.impact-knockdown .live-silhouette-card.blue-corner{animation-duration:1s!important}
+@keyframes aclCornerImpact{0%{filter:brightness(1.55);transform:translateY(-2px)}35%{filter:brightness(1.18);transform:translateY(0)}100%{filter:brightness(1);transform:translateY(0)}}
+.live-action-popup-host{width:min(360px,44%)!important;max-width:calc(100% - 34px)!important;top:clamp(38px,5.5vh,54px)!important}
+.live-action-popup-card{padding:12px 15px!important;animation:aclActionPopupInOut 4.8s cubic-bezier(.2,.75,.2,1) both!important}
+.live-action-popup-accessible-detail{display:none!important}
+.live-action-popup-title{line-height:1.08!important}
+/* The between-round break doubles as a clear, readable corner strategy moment. */
+.acl-commercial-break-stage{grid-template-rows:auto auto minmax(0,1fr) auto auto!important;gap:clamp(5px,.65vh,9px)!important}
+.acl-between-round-corners{display:grid!important;gap:5px!important;min-width:0!important;padding:6px 8px!important;border:1px solid rgba(201,164,92,.23)!important;border-radius:7px!important;background:rgba(5,9,13,.45)!important}
+.acl-between-round-heading{font-size:7px!important;font-weight:950!important;letter-spacing:.12em!important;color:#d7bd7d!important}
+.acl-between-round-grid{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:7px!important}
+.acl-between-round-card{display:grid!important;gap:3px!important;min-width:0!important;padding:5px 7px!important;border-left:2px solid #e05a69!important;background:rgba(255,255,255,.025)!important}
+.acl-between-round-card.blue{border-left-color:#4d91e8!important}
+.acl-between-round-card>span{font-size:7px!important;font-weight:950!important;letter-spacing:.06em!important;color:#ff8d9a!important}
+.acl-between-round-card.blue>span{color:#8bbcff!important}
+.acl-between-round-card>strong{font-size:8px!important;color:#dce4eb!important;line-height:1.2!important}
+.acl-between-round-card>p{margin:0!important;font-size:9px!important;line-height:1.38!important;color:#c4ced7!important;white-space:normal!important;overflow-wrap:anywhere!important}
+/* The active broadcast remains a single viewport; only archival drawers can scroll when opened. */
+.modal.live-modal .modal-body{overflow:hidden!important}
+.live-panel-clean{overflow:hidden!important;min-height:0!important}
+.live-broadcast-grid{min-height:0!important;overflow:hidden!important}
+.live-visual-column,.live-commentary-column{min-height:0!important}
+@media(max-width:1100px) and (min-width:901px){
+ .live-broadcast-grid{grid-template-columns:minmax(0,1.2fr) minmax(300px,.9fr)!important;gap:8px!important}
+ .live-commentary-compact{grid-template-columns:80px minmax(0,1fr)!important;gap:8px!important}
+ .live-stamina-head span{font-size:7px!important}
+ .live-fan-scorecard-rounds{gap:3px!important}
+}
+@media(max-width:900px){
+ .live-broadcast-grid{grid-template-columns:minmax(0,1fr)!important;grid-template-rows:minmax(28vh,34vh) minmax(0,1fr)!important;gap:5px!important}
+ .live-visual-column{grid-row:1!important}
+ .live-commentary-column{grid-row:2!important;display:grid!important;grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;grid-template-rows:max-content max-content minmax(0,1fr)!important;gap:5px!important;padding:5px!important;overflow:hidden!important;align-content:stretch!important}
+ .live-commentary-column>.live-commentary-compact{grid-column:1/-1!important;grid-row:1!important}
+ .live-commentary-column>.live-live-stats{grid-column:1!important;grid-row:2!important}
+ .live-commentary-column>.acl-fan-scorecard{grid-column:2!important;grid-row:2!important}
+ .live-commentary-column>.live-secondary-drawers{grid-column:1/-1!important;grid-row:3!important}
+ .live-live-stat-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+ .live-stamina-strip{gap:4px!important}
+ .live-stamina-row{padding:5px!important}
+ .live-stamina-head span{font-size:6px!important}
+ .live-stamina-head strong{font-size:9px!important}
+ .live-stamina-row small{font-size:6px!important}
+ .acl-fan-scorecard{min-width:0!important;overflow:hidden!important}
+ .acl-fan-scorecard-rounds{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:3px!important}
+ .acl-fan-score-round{padding:4px!important}
+ .acl-fan-score-inputs select{height:24px!important;min-height:24px!important;font-size:7px!important}
+ .live-secondary-drawers{margin-top:0!important;grid-template-columns:repeat(2,minmax(0,1fr))!important}
+ .live-fan-scorecard-drawer{grid-column:1/-1!important}
+ .live-fan-scorecard-drawer .live-detail-inner{max-height:32vh!important}
+ .acl-commercial-break-stage{grid-template-rows:auto auto minmax(0,1fr) auto auto!important;gap:4px!important;padding:6px!important}
+ .acl-between-round-corners{padding:4px!important;gap:3px!important}
+ .acl-between-round-card{padding:3px 5px!important}
+ .acl-between-round-card>p{font-size:7px!important;line-height:1.25!important}
+}
+@media(max-width:600px){
+ .live-commentary-compact{grid-template-columns:1fr!important;gap:5px!important}
+ .live-commentary-compact-head{flex-direction:row!important;justify-content:space-between!important;border:0!important;padding:0!important}
+ .live-commentary-compact-text{font-size:11px!important;line-height:1.42!important}
+ .live-live-stat-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+ .live-stamina-strip{grid-template-columns:1fr!important}
+ .live-action-popup-host{width:min(420px,82%)!important;top:34px!important}
+ .acl-between-round-grid{grid-template-columns:1fr!important}
+ .acl-between-round-card>p{font-size:7px!important}
+}
+@media(max-height:720px){
+ .live-panel-clean{gap:4px!important}
+ .live-commentary-column{gap:4px!important;padding:5px!important}
+ .live-commentary-compact{padding:7px 9px!important}
+ .live-commentary-compact-text{font-size:11px!important;line-height:1.38!important}
+ .live-live-stat{padding:4px 5px!important}
+ .live-stamina-row{padding:4px 6px!important}
+ .acl-fan-scorecard{padding:5px!important}
+ .acl-fan-scorecard-head{margin-bottom:3px!important}
+ .acl-fan-score-round{padding:3px!important}
+ .acl-fan-score-inputs select{height:21px!important;min-height:21px!important;font-size:7px!important}
+ .live-secondary-drawers>details>summary{min-height:28px!important;padding:3px 5px!important}
+ .acl-commercial-break-stage{gap:4px!important;padding:6px!important}
+ .acl-commercial-sponsor-logo{height:clamp(30px,5vh,48px)!important}
+}
+@media(prefers-reduced-motion:reduce){.live-silhouette-stage.impact-on-red .live-silhouette-card.red-corner,.live-silhouette-stage.impact-on-blue .live-silhouette-card.blue-corner{animation:none!important}}
+</style>
+
+
+<style id="acl-fight-experience-final-fit-2026-11-22">
+/* Keep action highlights informative without covering both fighters. */
+.modal.live-modal .live-action-popup-host{top:34px!important;bottom:auto!important;width:min(270px,34%)!important;min-width:0!important;max-width:calc(100% - 28px)!important}
+.modal.live-modal .live-action-popup-card{padding:7px 9px!important;border-radius:7px!important;box-shadow:0 7px 22px rgba(0,0,0,.36)!important;backdrop-filter:blur(6px)!important}
+.modal.live-modal .live-action-popup-head{font-size:7px!important;line-height:1.2!important}
+.modal.live-modal .live-action-popup-actor{gap:4px!important;margin:3px 0!important;font-size:7px!important}
+.modal.live-modal .live-action-popup-actor strong,.modal.live-modal .live-popup-target{font-size:8px!important}
+.modal.live-modal .live-action-popup-title{font-size:clamp(12px,1.05vw,16px)!important;line-height:1.1!important;letter-spacing:0!important}
+.modal.live-modal .live-action-popup-result{margin-top:4px!important;font-size:7px!important;padding:3px 5px!important}
+/* Shorten the reaction rail on phones; the full sponsor showcase remains in the ten-second break. */
+@media(max-width:900px){
+ .modal.live-modal .acl-live-sponsors-compact{display:none!important;flex:0 0 0!important;width:0!important;height:0!important;min-height:0!important;max-height:0!important;margin:0!important;padding:0!important;border:0!important;overflow:hidden!important}
+ .modal.live-modal .acl-voice-arena{display:grid!important;grid-template-columns:62px minmax(0,1fr)!important;align-items:center!important;gap:4px!important;min-height:38px!important;height:38px!important;max-height:38px!important;padding:3px 5px!important;overflow:hidden!important}
+ .modal.live-modal .acl-voice-arena-head{display:flex!important;flex:0 0 auto!important;min-width:0!important;width:auto!important;flex-direction:column!important;gap:2px!important;align-items:flex-start!important}
+ .modal.live-modal .acl-voice-arena-head strong{font-size:6px!important;line-height:1.1!important;white-space:nowrap!important}
+ .modal.live-modal .acl-voice-arena-head span:not(.acl-voice-live-pill){display:none!important}
+ .modal.live-modal .acl-voice-live-pill{font-size:5px!important;padding:1px 3px!important}
+ .modal.live-modal .acl-voice-reactions{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:3px!important;min-width:0!important}
+ .modal.live-modal .acl-voice-reaction{display:grid!important;grid-template-columns:1fr!important;justify-items:center!important;align-content:center!important;gap:0!important;min-width:0!important;min-height:29px!important;height:29px!important;padding:2px!important}
+ .modal.live-modal .acl-voice-emoji{font-size:11px!important;line-height:1.1!important}
+ .modal.live-modal .acl-voice-reaction strong{font-size:5px!important;line-height:1.1!important;letter-spacing:0!important;white-space:nowrap!important;overflow:hidden!important;text-overflow:ellipsis!important}
+ .modal.live-modal .acl-voice-count{font-size:6px!important;line-height:1!important}
+ .modal.live-modal .acl-voice-footnote{display:none!important}
+ .modal.live-modal .live-broadcast-grid{grid-template-columns:minmax(0,1fr)!important;grid-template-rows:minmax(22vh,24vh) minmax(0,1fr)!important;gap:4px!important}
+ .modal.live-modal .live-visual-column{grid-row:1!important;min-height:0!important}
+ .modal.live-modal .live-commentary-column{grid-row:2!important;display:flex!important;flex-direction:column!important;gap:5px!important;padding:5px!important;overflow:hidden!important}
+ .modal.live-modal .live-commentary-compact{display:grid!important;grid-template-columns:64px minmax(0,1fr)!important;gap:7px!important;min-height:0!important;padding:7px 8px!important}
+ .modal.live-modal .live-commentary-compact-head{display:flex!important;flex-direction:column!important;gap:3px!important;align-items:flex-start!important;border-right:1px solid rgba(255,255,255,.1)!important;padding-right:6px!important}
+ .modal.live-modal .live-commentary-compact-kicker{font-size:6px!important;line-height:1.15!important}
+ .modal.live-modal .live-commentary-compact-clock{font-size:7px!important;white-space:nowrap!important}
+ .modal.live-modal .live-commentary-compact-copy{gap:3px!important}
+ .modal.live-modal .live-commentary-compact-actor{font-size:6px!important;line-height:1.15!important}
+ .modal.live-modal .live-commentary-compact-text{font-size:9px!important;line-height:1.28!important}
+ .modal.live-modal .live-live-stats{display:grid!important;gap:4px!important;padding:0!important}
+ .modal.live-modal .live-live-stat-grid{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:3px!important}
+ .modal.live-modal .live-live-stat{min-width:0!important;min-height:0!important;padding:4px 3px!important}
+ .modal.live-modal .live-live-stat>span{font-size:5px!important;line-height:1.1!important;white-space:normal!important}
+ .modal.live-modal .live-live-stat-values{display:flex!important;flex-direction:column!important;gap:2px!important;font-size:6px!important;line-height:1.1!important}
+ .modal.live-modal .live-stamina-strip{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:4px!important}
+ .modal.live-modal .live-stamina-row{padding:4px 5px!important}
+ .modal.live-modal .live-stamina-head{gap:3px!important;margin-bottom:3px!important}
+ .modal.live-modal .live-stamina-head span{font-size:5px!important;white-space:nowrap!important}
+ .modal.live-modal .live-stamina-head strong{font-size:8px!important}
+ .modal.live-modal .live-stamina-track{height:4px!important}
+ .modal.live-modal .live-stamina-row small{font-size:5px!important;margin-top:2px!important}
+ .modal.live-modal .live-secondary-drawers{display:grid!important;grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;grid-auto-rows:min-content!important;gap:3px!important;margin-top:0!important}
+ .modal.live-modal .live-secondary-drawers>details>summary{min-height:28px!important;padding:4px 6px!important}
+ .modal.live-modal .live-secondary-drawers>details>summary strong{font-size:6px!important}
+ .modal.live-modal .live-secondary-drawers>details>summary small{font-size:5px!important;line-height:1.1!important}
+ .modal.live-modal .live-fan-scorecard-drawer{grid-column:1/-1!important}
+ .modal.live-modal .live-action-popup-host{top:27px!important;width:min(245px,74%)!important;max-width:calc(100% - 20px)!important}
+ .modal.live-modal .live-action-popup-card{padding:5px 7px!important}
+ .modal.live-modal .live-action-popup-title{font-size:11px!important}
+ .modal.live-modal .live-action-popup-actor{font-size:6px!important}
+ .modal.live-modal .live-action-popup-actor strong,.modal.live-modal .live-popup-target{font-size:7px!important}
+ .modal.live-modal .live-action-popup-head,.modal.live-modal .live-action-popup-result{font-size:6px!important}
+ .modal.live-modal .acl-commercial-break-stage{grid-template-rows:auto auto minmax(0,1fr) auto auto!important;gap:3px!important;padding:5px!important}
+ .modal.live-modal .acl-between-round-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:4px!important}
+ .modal.live-modal .acl-between-round-card{padding:4px!important}
+ .modal.live-modal .acl-between-round-card>p{font-size:6px!important;line-height:1.2!important}
+}
+@media(max-width:420px){
+ .modal.live-modal .live-broadcast-grid{grid-template-rows:minmax(21vh,22vh) minmax(0,1fr)!important}
+ .modal.live-modal .live-commentary-compact{grid-template-columns:56px minmax(0,1fr)!important;padding:6px!important;gap:5px!important}
+ .modal.live-modal .live-commentary-compact-text{font-size:8.5px!important;line-height:1.25!important}
+ .modal.live-modal .live-live-stat-grid{grid-template-columns:repeat(4,minmax(0,1fr))!important}
+ .modal.live-modal .live-live-stat>span{font-size:4.5px!important}
+ .modal.live-modal .live-live-stat-values{font-size:5.5px!important}
+ .modal.live-modal .live-secondary-drawers>details>summary{min-height:25px!important;padding:3px 4px!important}
+ .modal.live-modal .live-secondary-drawers>details>summary strong{font-size:5.5px!important}
+ .modal.live-modal .live-secondary-drawers>details>summary small{font-size:4.5px!important}
+}
+@media(max-height:800px) and (min-width:901px){
+ .modal.live-modal .live-commentary-compact{grid-template-columns:minmax(0,1fr)!important;gap:5px!important;padding:7px 9px!important}
+ .modal.live-modal .live-commentary-compact-head{display:flex!important;flex-direction:row!important;align-items:center!important;justify-content:space-between!important;gap:8px!important;padding:0 0 4px!important;border-right:0!important;border-bottom:1px solid rgba(255,255,255,.1)!important}
+ .modal.live-modal .live-commentary-compact-text{font-size:9.5px!important;line-height:1.25!important}
+ .modal.live-modal .live-commentary-compact.is-medium .live-commentary-compact-text{font-size:9px!important;line-height:1.22!important}
+ .modal.live-modal .live-commentary-compact.is-long .live-commentary-compact-text{font-size:8.5px!important;line-height:1.2!important}
+ .modal.live-modal .live-live-stats{gap:4px!important}
+ .modal.live-modal .live-stamina-strip{gap:4px!important}
+ .modal.live-modal .live-stamina-row{padding:4px 6px!important}
+ .modal.live-modal .live-stamina-row small{font-size:6px!important;margin-top:2px!important}
+ .modal.live-modal .live-secondary-drawers{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:3px!important}
+ .modal.live-modal .live-fan-scorecard-drawer{grid-column:auto!important}
+ .modal.live-modal .live-secondary-drawers>details>summary{min-height:25px!important;padding:3px 4px!important}
+ .modal.live-modal .live-secondary-drawers>details>summary strong{font-size:5.8px!important}
+ .modal.live-modal .live-secondary-drawers>details>summary small{display:none!important}
+ .modal.live-modal .live-secondary-drawers>details>summary strong{font-size:6.5px!important}
+ .modal.live-modal .live-secondary-drawers>details>summary small{font-size:5.5px!important}
+}
+@media(max-height:700px) and (min-width:901px){
+ .modal.live-modal .live-action-popup-host{top:28px!important;width:min(255px,34%)!important}
+ .modal.live-modal .live-action-popup-title{font-size:13px!important}
+ .modal.live-modal .live-commentary-compact{padding:7px 9px!important}
+ .modal.live-modal .live-commentary-compact-text{font-size:11px!important;line-height:1.35!important}
+}
+
+/* Scale unusually long play-by-play text down slightly instead of truncating it. */
+.modal.live-modal .live-commentary-compact.is-medium .live-commentary-compact-text{font-size:11.5px!important;line-height:1.42!important}
+.modal.live-modal .live-commentary-compact.is-long .live-commentary-compact-text{font-size:10.5px!important;line-height:1.35!important}
+.modal.live-modal .live-action-popup-actor .live-popup-arrow,.modal.live-modal .live-action-popup-actor .live-popup-target{display:none!important}
+.modal.live-modal .live-action-popup-actor strong{max-width:150px!important;overflow:hidden!important;text-overflow:ellipsis!important;white-space:nowrap!important}
+@media(max-width:900px){.modal.live-modal .live-commentary-compact.is-medium .live-commentary-compact-text{font-size:8.2px!important}.modal.live-modal .live-commentary-compact.is-long .live-commentary-compact-text{font-size:7.6px!important}.modal.live-modal .live-action-popup-actor strong{max-width:95px!important}}
+
+/* Between-round sponsor/corner screen uses the full visual column instead of collapsing to its content height. */
+.modal.live-modal .live-visual-column:has(>.acl-commercial-break-stage[style*="grid"])>.acl-commercial-break-stage{flex:1 1 100%!important;width:100%!important;height:100%!important;min-height:0!important;max-height:100%!important}
+@media(max-width:900px){
+ .modal.live-modal .live-broadcast-grid:has(.acl-commercial-break-stage[style*="grid"]){grid-template-rows:minmax(31vh,32vh) minmax(0,1fr)!important}
+ .modal.live-modal .live-broadcast-grid:has(.acl-commercial-break-stage[style*="grid"]) .live-commentary-column #liveStatsLive{display:none!important}
+ .modal.live-modal .acl-commercial-break-stage{min-height:0!important;height:100%!important;max-height:100%!important}
+}
+
+/* The rest screen replaces the octagon; force-hide the active stage so it cannot share half the column. */
+.modal.live-modal #liveStage[style*="display: none"]{display:none!important}
+.modal.live-modal #aclCommercialBreakStage[style*="grid"]{display:grid!important}
+</style>
+
 </head>
 <body>
 <div class="shell">
@@ -4114,7 +4355,8 @@ function liveCompactNarrationHTML(live,beat){
  const actor=beat?.actorName||(side?(side==='a'?nameWithNick(a):nameWithNick(b)):'COMENTÁRIO DA TRANSMISSÃO');
  const marker=beat?.kind==='finish'?'RESULTADO':beat?.kind==='round'?'FIM DO ROUND':beat?.kind==='round-start'?'INÍCIO DO ROUND':(beat?.impact?.landed>0||beat?.impact?.type==='takedown'&&beat?.impact?.landed>0)?'LANCE IMPORTANTE':'AO VIVO';
  const special=beat?.kind==='finish'?' is-finish':beat?.impact?.landed>0||beat?.impact?.knockdown?' is-impact':'';
- return `<section id="liveCompactNarration" class="live-commentary-compact${special}" data-side="${side}" aria-live="polite"><div class="live-commentary-compact-head"><span class="live-commentary-compact-kicker">${marker}</span><span class="live-commentary-compact-clock">R${Number(beat?.round)||1} · ${esc(beat?.clock||'00:00')}</span></div><div class="live-commentary-compact-copy"><div class="live-commentary-compact-actor ${side==='a'?'red':side==='b'?'blue':'neutral'}">${side==='a'?'🔴 CANTO VERMELHO':side==='b'?'🔵 CANTO AZUL':esc(actor)}</div><p class="live-commentary-compact-text">${esc(text)}</p></div></section>`;
+ const lengthClass=text.length>360?' is-long':text.length>220?' is-medium':'';
+ return `<section id="liveCompactNarration" class="live-commentary-compact${special}${lengthClass}" data-side="${side}" aria-live="polite"><div class="live-commentary-compact-head"><span class="live-commentary-compact-kicker">${marker}</span><span class="live-commentary-compact-clock">R${Number(beat?.round)||1} · ${esc(beat?.clock||'00:00')}</span></div><div class="live-commentary-compact-copy"><div class="live-commentary-compact-actor ${side==='a'?'red':side==='b'?'blue':'neutral'}">${side==='a'?'🔴 CANTO VERMELHO':side==='b'?'🔵 CANTO AZUL':esc(actor)}</div><p class="live-commentary-compact-text">${esc(text)}</p></div></section>`;
 }
 
 function liveActionOutcome(beat){
@@ -4173,16 +4415,22 @@ function liveActionSummaryHTML(live,beat){
  const detailSource=impact.commentary||beat.text||'';
  if(!detail)detail=detailSource.replace(/\s+/g,' ').trim();
  if(target&&isStrike&&!detail)detail=`${nameWithNick(actor)} conectou em ${nameWithNick(target)}.`;
- if(detail.length>125)detail=detail.slice(0,122)+'…';
+ // Preserve the complete action detail; the broadcast card grows to fit it.
  const actorName=actor?nameWithNick(actor):(beat.actorName||'Ambos os atletas');
  const corner=actorSide==='a'?'CANTO VERMELHO':actorSide==='b'?'CANTO AZUL':'ACL FIGHT LIVE';
- return `<article class="live-action-popup-card" data-side="${side}" role="status" aria-live="polite"><div class="live-action-popup-head"><span>${esc(eyebrow)}</span><span>R${Number(beat.round)||1} · ${esc(beat.clock||'00:00')}</span></div><div class="live-action-popup-actor"><span class="live-popup-dot ${actorSide==='a'?'red':actorSide==='b'?'blue':''}"></span><span class="live-popup-corner">${esc(corner)}</span><strong>${esc(actorName)}</strong>${target?`<span class="live-popup-arrow">→</span><span class="live-popup-target">${esc(nameWithNick(target))}</span>`:''}</div><div class="live-action-popup-title">${esc(title)}</div><div class="live-action-popup-result ${outcome.kind}">${esc(isStrike&&Number(impact.landed)>0?`CONECTOU ${impact.region==='head'?'NA CABEÇA':impact.region==='body'?'NO CORPO':impact.region==='legs'?'NA PERNA':''}`:outcome.label)}</div>${detail?`<p>${esc(detail)}</p>`:''}</article>`;
+ return `<article class="live-action-popup-card" data-side="${side}" role="status" aria-live="polite"><div class="live-action-popup-head"><span>${esc(eyebrow)}</span><span>R${Number(beat.round)||1} · ${esc(beat.clock||'00:00')}</span></div><div class="live-action-popup-actor"><span class="live-popup-dot ${actorSide==='a'?'red':actorSide==='b'?'blue':''}"></span><span class="live-popup-corner">${esc(corner)}</span><strong>${esc(actorName)}</strong>${target?`<span class="live-popup-arrow">→</span><span class="live-popup-target">${esc(nameWithNick(target))}</span>`:''}</div><div class="live-action-popup-title">${esc(title)}</div><div class="live-action-popup-result ${outcome.kind}">${esc(isStrike&&Number(impact.landed)>0?`CONECTOU ${impact.region==='head'?'NA CABEÇA':impact.region==='body'?'NO CORPO':impact.region==='legs'?'NA PERNA':''}`:outcome.label)}</div>${detail?`<span class=\"live-action-popup-accessible-detail\" title=\"${esc(detail)}\" aria-label=\"${esc(detail)}\"></span>`:''}</article>`;
 }
 function liveLiveStatsHTML(live,a,b){
- const s=live.stats||liveFreshStats(),sa={...liveFreshSideStats(),...(s.a||{})},sb={...liveFreshSideStats(),...(s.b||{})};
+ const s=live.stats||liveFreshStats(),sa={...liveFreshSideStats(),...(s.a||{})},sb={...liveFreshSideStats(),...(s.b||{})},combat=ensureLiveCombatState(live),stamina=combat.stamina||{a:100,b:100};
  const pairs=[['GOLPES CONECTADOS',liveStatRatio(sa.strikesLanded,sa.strikesAttempted),liveStatRatio(sb.strikesLanded,sb.strikesAttempted)],['SIGNIFICATIVOS',liveStatRatio(sa.significantLanded,sa.significantAttempted),liveStatRatio(sb.significantLanded,sb.significantAttempted)],['QUEDAS',liveStatRatio(sa.takedownLanded,sa.takedownAttempted),liveStatRatio(sb.takedownLanded,sb.takedownAttempted)],['TENT. FINALIZAÇÃO',String(sa.submissionAttempts),String(sb.submissionAttempts)]];
- return `<section class="live-live-stats" id="liveStatsLive" aria-label="Estatísticas ao vivo">${pairs.map(x=>`<div class="live-live-stat"><span>${x[0]}</span><div class="live-live-stat-values"><b class="red">🔴 ${x[1]}</b><b class="blue">🔵 ${x[2]}</b></div></div>`).join('')}</section>`;
+ const staminaRow=(side,label)=>{const value=clamp(Number(stamina[side]??100),0,100);return `<div class="live-stamina-row ${side==='a'?'red':'blue'}" data-stamina-side="${side}"><div class="live-stamina-head"><span>${label} · FÔLEGO</span><strong data-stamina-value="${side}">${Math.round(value)}%</strong></div><div class="live-stamina-track"><i data-stamina-bar="${side}" style="width:${value}%"></i></div><small data-stamina-state="${side}">${value>=70?'RESERVA BOA':value>=40?'FÔLEGO EM QUEDA':'BAIXA RESERVA'}</small></div>`;};
+ return `<section class="live-live-stats" id="liveStatsLive" aria-label="Estatísticas e condição física ao vivo"><div class="live-live-stat-grid">${pairs.map(x=>`<div class="live-live-stat"><span>${x[0]}</span><div class="live-live-stat-values"><b class="red">🔴 ${x[1]}</b><b class="blue">🔵 ${x[2]}</b></div></div>`).join('')}</div><div class="live-stamina-strip" aria-label="Reserva de fôlego dos atletas">${staminaRow('a','CANTO VERMELHO')}${staminaRow('b','CANTO AZUL')}</div></section>`;
 }
+function updateLiveStaminaDOM(live){
+ if(!live)return;const stamina=ensureLiveCombatState(live).stamina||{a:100,b:100};
+ for(const side of ['a','b']){const value=clamp(Number(stamina[side]??100),0,100),label=value>=70?'RESERVA BOA':value>=40?'FÔLEGO EM QUEDA':'BAIXA RESERVA';document.querySelectorAll(`[data-stamina-bar="${side}"]`).forEach(el=>{el.style.width=`${value}%`;el.setAttribute('aria-valuenow',String(Math.round(value)));});document.querySelectorAll(`[data-stamina-value="${side}"]`).forEach(el=>el.textContent=`${Math.round(value)}%`);document.querySelectorAll(`[data-stamina-state="${side}"]`).forEach(el=>el.textContent=label);}
+}
+
 function updateLiveFightOverlays(live,beat=(live?.beats||[]).slice(-1)[0]){
  if(!live)return;
  const popupHost=Array.from(document.querySelectorAll('#viewRoot #liveActionPopupHost, #modalBody #liveActionPopupHost')).find(Boolean);
@@ -4196,6 +4444,14 @@ function updateLiveFightOverlays(live,beat=(live?.beats||[]).slice(-1)[0]){
  }
  const statsHTML=live.status==='finished'?'':liveLiveStatsHTML(live,...[liveFightContext(live).a,liveFightContext(live).b]);
  document.querySelectorAll('#viewRoot #liveStatsLive, #modalBody #liveStatsLive').forEach(el=>{if(live.status==='finished'){el.remove();return;}const box=document.createElement('div');box.innerHTML=statsHTML;const next=box.firstElementChild;if(next)el.replaceWith(next);});
+ const actorSide=beat?.actorSide||(String(beat?.move||'').match(/^([ab])-/)||[])[1]||'';
+ const impact=beat?.impact||{},impactType=String(impact.type||'');
+ const meaningfulImpact=Number(impact.landed)>0&&(impactType==='strike'||impactType==='takedown'||impactType==='submission');
+ const targetSide=actorSide==='a'?'b':actorSide==='b'?'a':'';
+ document.querySelectorAll('#viewRoot #liveStage, #modalBody #liveStage').forEach(stage=>{
+  stage.classList.remove('impact-on-red','impact-on-blue','impact-knockdown');
+  if(meaningfulImpact&&targetSide){stage.classList.add(targetSide==='a'?'impact-on-red':'impact-on-blue');if(impact.knockdown||impact.finish)stage.classList.add('impact-knockdown');}
+ });
  const feedCount=Array.from(document.querySelectorAll('#viewRoot #liveNarrationFeed, #modalBody #liveNarrationFeed')).find(Boolean);
  if(feedCount){const badge=feedCount.closest('details')?.querySelector('[data-live-beat-count]');if(badge)badge.textContent=`${feedCount.children.length} registros`;}
  updateLiveResultSpotlight(live);
@@ -4241,6 +4497,14 @@ function aclSponsorBroadcastStripHTML(event=null,live=null){
  const noSupportClass=secondary.length?'':' has-no-supporters';
  return `<section class="acl-live-sponsors acl-live-sponsors-compact" aria-label="Patrocinadores oficiais da transmissão"><div class="acl-live-sponsors-compact-heading"><span class="acl-live-sponsors-brand-chip">ACL</span><div><strong>${esc(mainLabel)}</strong><small>${esc(eventName)}</small><em>${main.length} marca(s) · mesma cota visual</em></div></div><div class="acl-live-sponsors-compact-body${noSupportClass}"><div class="acl-live-sponsors-master-area"><div class="acl-live-sponsors-row-label"><strong>${esc(mainLabel)}</strong><small>${main.length>mainBatch?'EXIBIÇÃO ROTATIVA':'DESTAQUE IGUAL PARA TODOS'}</small></div>${mainGrid}</div>${supportArea}</div></section>`;
 }
+function liveCornerBreakHTML(live){
+ if(!live)return '';
+ if(!live.cornerAdvice)refreshLiveCornerAdvice(live,Math.max(1,Number(live.rounds)||3),'break');
+ const c=live.cornerAdvice||{},round=Math.max(1,Number(c.round)||1),stamp=Number(c.updatedAt)||0;
+ const card=(side,data,fallback)=>`<article class="acl-between-round-card ${side}"><span>${side==='red'?'🔴 CANTO VERMELHO':'🔵 CANTO AZUL'}</span><strong>${esc(data?.name||fallback)}</strong><p>${esc(data?.advice||'A equipe orienta o atleta para o próximo round.')}</p></article>`;
+ const {a,b}=liveFightContext(live);
+ return `<section class="acl-between-round-corners" data-corner-break data-advice-updated="${stamp}" aria-label="Instruções dos corners após o round ${round}"><div class="acl-between-round-heading">AJUSTES DOS CORNERS · APÓS O ROUND ${round}</div><div class="acl-between-round-grid">${card('red',c.red,a?.gym||'Equipe técnica vermelha')}${card('blue',c.green,b?.gym||'Equipe técnica azul')}</div></section>`;
+}
 function aclCommercialBreakStageHTML(event,live,period,elapsed){
  const all=aclSortSponsors((Array.isArray(state.sponsors)?state.sponsors:[]).filter(x=>x.active!==false)),masters=all.filter(aclIsMasterSponsor),supporters=all.filter(x=>!aclIsMasterSponsor(x));
  const main=masters.length?masters:all,secondary=masters.length?supporters:[],mainBatch=aclSponsorBatchSizeForZone('commercial-master'),group=aclSponsorCycleGroup(main.length,mainBatch,elapsed,period,1);
@@ -4248,7 +4512,7 @@ function aclCommercialBreakStageHTML(event,live,period,elapsed){
  const cards=main.map((item,i)=>{const logo=aclSponsorLogo(item),name=String(item?.name||'Parceiro ACL'),href=aclSafeHttpUrl(item?.website),mark=logo?`<img src="${esc(logo)}" alt="Logotipo ${esc(name)}" loading="lazy" referrerpolicy="no-referrer">`:`<span class="acl-commercial-monogram">${esc(aclDisplayInitials(name))}</span>`,desc=String(item?.description||'').trim();const hidden=aclSponsorCycleHidden(i,mainBatch,group);const inner=`<span class="acl-commercial-sponsor-logo">${mark}</span><strong>${esc(name)}</strong>${desc?`<small>${esc(desc)}</small>`:`<small>${masters.length?'Patrocinador Master da ACL':'Parceiro oficial da ACL'}</small>`}`;const attrs=`class="acl-commercial-sponsor-card${hidden?' is-cycle-hidden':''}" data-acl-sponsor-zone="commercial-master" data-acl-sponsor-index="${i}"`;return href?`<a ${attrs} href="${esc(href)}" target="_blank" rel="noopener noreferrer" title="${esc(desc||name)}">${inner}</a>`:`<div ${attrs} title="${esc(desc||name)}">${inner}</div>`;}).join('');
  const supportBatch=aclSponsorBatchSizeForZone('commercial-supporter'),partnerGroup=aclSponsorCycleGroup(secondary.length,supportBatch,elapsed,period,1),partnerPills=secondary.map((item,i)=>aclLiveSupporterPillHTML(item,i,'commercial-supporter',aclSponsorCycleHidden(i,supportBatch,partnerGroup))).join('');
  const title=masters.length?'PATROCINADORES MASTER':'PARCEIROS OFICIAIS';
- return `<section id="aclCommercialBreakStage" class="acl-commercial-break-stage" style="display:${period?.inRest&&live?.status!=='finished'?'grid':'none'}" aria-label="Intervalo comercial entre rounds"><div class="acl-commercial-break-topline"><div><span>ACL PARTNERS · INTERVALO COMERCIAL</span><strong>${title}</strong></div><div class="acl-commercial-break-countdown"><small>RETORNO EM</small><strong data-acl-commercial-countdown>00:${String(period?.restRemaining??ACL_LIVE_REST_SECONDS).padStart(2,'0')}</strong></div></div>${main.length?`<div class="acl-commercial-break-grid" style="grid-template-columns:repeat(${colCount},minmax(0,1fr))">${cards}</div>`:`<div class="acl-commercial-empty">As marcas parceiras da ACL serão apresentadas aqui.</div>`}${secondary.length?`<div class="acl-commercial-break-support"><span>TAMBÉM APOIAM A ACL</span><div class="acl-commercial-break-support-grid">${partnerPills}</div></div>`:`<div class="acl-commercial-break-support is-empty"><span>${masters.length?'PATROCINADORES OFICIAIS DA TRANSMISSÃO':'ACL · PARCEIROS OFICIAIS'}</span></div>`}<div class="acl-commercial-break-footer"><span>ACL · LOS SANTOS</span><span>O PRÓXIMO ROUND COMEÇA AUTOMATICAMENTE</span></div></section>`;
+ return `<section id="aclCommercialBreakStage" class="acl-commercial-break-stage" style="display:${period?.inRest&&live?.status!=='finished'?'grid':'none'}" aria-label="Intervalo comercial entre rounds"><div class="acl-commercial-break-topline"><div><span>ACL PARTNERS · INTERVALO COMERCIAL</span><strong>${title}</strong></div><div class="acl-commercial-break-countdown"><small>RETORNO EM</small><strong data-acl-commercial-countdown>00:${String(period?.restRemaining??ACL_LIVE_REST_SECONDS).padStart(2,'0')}</strong></div></div>${liveCornerBreakHTML(live)}${main.length?`<div class="acl-commercial-break-grid" style="grid-template-columns:repeat(${colCount},minmax(0,1fr))">${cards}</div>`:`<div class="acl-commercial-empty">As marcas parceiras da ACL serão apresentadas aqui.</div>`}${secondary.length?`<div class="acl-commercial-break-support"><span>TAMBÉM APOIAM A ACL</span><div class="acl-commercial-break-support-grid">${partnerPills}</div></div>`:`<div class="acl-commercial-break-support is-empty"><span>${masters.length?'PATROCINADORES OFICIAIS DA TRANSMISSÃO':'ACL · PARCEIROS OFICIAIS'}</span></div>`}<div class="acl-commercial-break-footer"><span>ACL · LOS SANTOS</span><span>O PRÓXIMO ROUND COMEÇA AUTOMATICAMENTE</span></div></section>`;
 }
 const ACL_ARENA_REACTIONS=[{key:'fire',emoji:'🔥',label:'QUE LUTA!'},{key:'almost',emoji:'😱',label:'QUASE!'},{key:'applause',emoji:'👏',label:'APLAUSOS'},{key:'dominance',emoji:'🥶',label:'DOMÍNIO'}];
 function aclArenaCounts(liveId){
@@ -4399,10 +4663,9 @@ function liveSimulationHTML(live){
  <div class="live-broadcast-grid">
   <div class="live-visual-column"><section class="live-stage live-silhouette-stage" id="liveStage" style="display:${period.inRest?'none':'flex'}" data-live-id="${esc(live.id)}" data-move="${esc(lastMove)}" aria-label="Octógono ACL com silhuetas e mapa de dano"><div class="live-stage-heading"><strong>OCTÓGONO ACL</strong><span class="live-heat-legend"><span>DANO</span> LEVE <i class="live-heat-gradient"></i> SEVERO</span></div>${liveFightSilhouettesHTML(a,b,live.damage)}<div class="live-action-popup-host" id="liveActionPopupHost" data-beat-key="${esc(liveActionBeatKey(lastBeat))}" aria-live="polite">${initialPopup}</div><div class="live-stage-footer"><span><i class="live-footer-dot red"></i>${esc(nameWithNick(a))}</span><span class="live-footer-acl">ACL · FIGHT LIVE</span><span><i class="live-footer-dot blue"></i>${esc(nameWithNick(b))}</span></div></section>${aclCommercialBreakStageHTML(e,live,period,elapsed)}</div>
   <aside class="live-commentary-column" aria-label="Informações ao vivo">
-   ${finished?'':liveLiveStatsHTML(live,a,b)}
    ${liveCompactNarrationHTML(live,lastBeat)}
-   ${aclFanScorecardHTML(live)}
-   <div class="live-secondary-drawers"><details class="live-commentary-drawer"><summary><span><strong>Histórico de lances</strong><small>Registros anteriores da transmissão</small></span><span class="live-drawer-count" data-live-beat-count>${beats.length} registros</span></summary><div class="live-feed" id="liveNarrationFeed">${beats.map(liveBeatHTML).join('')}</div></details><details class="live-commentary-drawer"><summary><span><strong>Estatísticas e corners</strong><small>Dados técnicos e ajustes táticos</small></span><span class="live-drawer-chevron">＋</span></summary><div class="live-detail-inner">${liveCornerAdviceHTML(live)}<div class="panel-head"><div><h3>Estatísticas da luta</h3><p>Conectados/tentativas, quedas, controle e finalizações.</p></div></div>${liveStatsTableHTML(live.stats,a,b)}</div></details></div>
+   ${finished?'':liveLiveStatsHTML(live,a,b)}
+   <div class="live-secondary-drawers">${finished?'':`<details class="live-commentary-drawer live-fan-scorecard-drawer"><summary><span><strong>Meu Cartão de Juiz</strong><small>Pontue os rounds encerrados e compare ao final</small></span><span class="live-drawer-chevron">＋</span></summary><div class="live-detail-inner">${aclFanScorecardHTML(live)}</div></details>`}<details class="live-commentary-drawer"><summary><span><strong>Histórico de lances</strong><small>Registros anteriores da transmissão</small></span><span class="live-drawer-count" data-live-beat-count>${beats.length} registros</span></summary><div class="live-feed" id="liveNarrationFeed">${beats.map(liveBeatHTML).join('')}</div></details><details class="live-commentary-drawer"><summary><span><strong>Estatísticas e corners</strong><small>Dados técnicos e ajustes táticos</small></span><span class="live-drawer-chevron">＋</span></summary><div class="live-detail-inner">${liveCornerAdviceHTML(live)}<div class="panel-head"><div><h3>Estatísticas da luta</h3><p>Conectados/tentativas, quedas, controle e finalizações.</p></div></div>${liveStatsTableHTML(live.stats,a,b)}</div></details></div>
   </aside>
  </div>${liveResultSpotlightHTML(live)}</div>`;
 }
@@ -4416,6 +4679,7 @@ function openLiveSimulationModal(){
  aclLiveTakeoverCurrentId=String(live.id||'');aclLiveTakeoverDismissedId='';
  openModal('ACL Fight Live',`${nameWithNick(a)} vs. ${nameWithNick(b)} · ${e.name}`,liveSimulationHTML(live),liveModalFooter(live));
  aclUpdateFanScorecardAvailability(live,Math.floor(liveElapsedMs(live)/1000));
+ updateLiveStaminaDOM(live);
  initializeLiveSilhouetteStages($('modalBody'));
  const stage=liveDom('liveStage');if(stage){const lastBeat=(live.beats||[]).slice(-1)[0];applyLiveMove(stage,lastBeat?.move||'idle',live);}
  if(live.status==='running')ensureLiveTicker();else if(liveTicker){clearInterval(liveTicker);liveTicker=null;}
@@ -4472,10 +4736,10 @@ function aclUpdateCommercialBreak(live,period){
  const sponsorRails=Array.from(document.querySelectorAll('#viewRoot .acl-live-sponsors-compact, #modalBody .acl-live-sponsors-compact'));
  if(!stages.length||!fightStages.length)return;
  const active=!!period?.inRest&&live.status!=='finished';
- stages.forEach(stage=>{stage.style.display=active?'grid':'none';stage.setAttribute('aria-hidden',active?'false':'true');});
- fightStages.forEach(stage=>{stage.style.display=active?'none':'flex';stage.setAttribute('aria-hidden',active?'true':'false');});
+ stages.forEach(stage=>{stage.style.setProperty('display',active?'grid':'none','important');stage.setAttribute('aria-hidden',active?'false':'true');});
+ fightStages.forEach(stage=>{stage.style.setProperty('display',active?'none':'flex','important');stage.setAttribute('aria-hidden',active?'true':'false');});
  // The commercial showcase replaces the compact rail during the rest, so the same brands are not repeated twice.
- sponsorRails.forEach(rail=>{rail.style.display=active?'none':'';rail.setAttribute('aria-hidden',active?'true':'false');});
+ sponsorRails.forEach(rail=>{rail.style.setProperty('display',active?'none':'grid','important');rail.setAttribute('aria-hidden',active?'true':'false');});
  const countdown=`00:${String(Math.max(0,Math.floor(Number(period?.restRemaining)||0))).padStart(2,'0')}`;
  document.querySelectorAll('[data-acl-commercial-countdown]').forEach(el=>el.textContent=countdown);
  const status=document.querySelectorAll('#viewRoot #liveStatus, #modalBody #liveStatus');status.forEach(el=>{if(live.status==='paused')el.textContent='Transmissão pausada';else if(live.status==='finished')el.textContent='Combate encerrado';else if(active)el.textContent=`INTERVALO COMERCIAL · RETORNO EM ${countdown}`;else el.textContent=`AO VIVO · Próxima chamada em ${Math.max(0,live.nextBeatAtSec-Math.floor(liveElapsedMs(live)/1000))}s`;});
@@ -4486,10 +4750,12 @@ function updateLiveClock(live,elapsedSec){
  document.querySelectorAll('#viewRoot #liveClock, #modalBody #liveClock').forEach(el=>el.textContent=shownClock);
  document.querySelectorAll('#viewRoot #liveRoundLabel, #modalBody #liveRoundLabel').forEach(el=>el.textContent=live.status==='finished'?`ROUND ${clamp(f.result?.round||shownRound,1,live.rounds)} / ${live.rounds} · FIM`:live.decisionRevealStartedAt&&!live.decisionWinnerAnnounced?'CARTÕES DOS JUÍZES':liveRoundLabelAt(live,bounded));
  document.querySelectorAll('#viewRoot #liveElapsed, #modalBody #liveElapsed').forEach(el=>el.textContent=`Tempo de combate: ${liveTimeStamp(bounded)}`);
+ updateLiveStaminaDOM(live);
  document.querySelectorAll('#viewRoot #liveProgressBar, #modalBody #liveProgressBar').forEach(el=>el.style.width=`${liveProgressAtWall(live,bounded)}%`);
  document.querySelectorAll('#viewRoot .live-clock-hint, #modalBody .live-clock-hint').forEach(el=>el.textContent=period.inRest?'INTERVALO COMERCIAL · 10 SEGUNDOS':'ROUND DE 1 MINUTO · PAUSA COMERCIAL ENTRE ROUNDS');
  document.querySelectorAll('#viewRoot #liveStatus, #modalBody #liveStatus').forEach(el=>el.textContent=live.status==='paused'?'Transmissão pausada':live.status==='finished'?'Combate encerrado':live.decisionRevealStartedAt&&!live.decisionWinnerAnnounced?'ANÚNCIO DO RESULTADO · Cartões dos juízes':period.inRest?`INTERVALO COMERCIAL · RETORNO EM 00:${String(Math.max(0,period.restRemaining)).padStart(2,'0')}`:`AO VIVO · Próxima chamada em ${Math.max(0,live.nextBeatAtSec-Math.floor(bounded))}s`);
  document.querySelectorAll('#viewRoot #liveCoachAdvice, #modalBody #liveCoachAdvice').forEach(el=>{const round=String(Number(live.cornerAdvice?.round)||0),stamp=String(Number(live.cornerAdvice?.updatedAt)||0);if(el.dataset.adviceRound!==round||el.dataset.adviceUpdated!==stamp)el.outerHTML=liveCornerAdviceHTML(live);});
+ document.querySelectorAll('[data-corner-break]').forEach(el=>{const stamp=String(Number(live.cornerAdvice?.updatedAt)||0);if(el.dataset.adviceUpdated!==stamp){const box=document.createElement('div');box.innerHTML=liveCornerBreakHTML(live);const next=box.firstElementChild;if(next)el.replaceWith(next);}});
  aclUpdateCommercialBreak(live,period);aclUpdateSponsorPresentation(live,bounded,period);updateLiveResultSpotlight(live);aclUpdateFanScorecardAvailability(live,bounded);
 }
 function liveRoundEndWallSeconds(round){return round*ACL_LIVE_ROUND_SECONDS+(round-1)*ACL_LIVE_REST_SECONDS;}
