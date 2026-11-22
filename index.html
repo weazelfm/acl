@@ -4,7 +4,7 @@
 <link rel="icon" type="image/png" href="/acl-logo.png">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>APEX COMBAT LEAGUE — MMA</title>
+<title>APEX COMBAT LEAGUE — MMA em Los Santos</title>
 <meta name="acl-ui-revision" content="ranking-position-labels-on-event-cards-homepage-and-results-2026-11-06">
 <link rel="icon" type="image/png" href="./acl-favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1402,6 +1402,107 @@ html.acl-live-open,body.acl-live-open{overflow:hidden!important;height:100dvh!im
  .live-secondary-drawers>details>summary{min-height:26px!important;padding:3px 5px!important}
 }
 </style>
+
+<style id="acl-sponsors-narration-legibility-fix-2026-11-18">
+/* Sponsor rail: stable height, visible master logos and a readable supporter row. */
+.acl-live-sponsors-compact{display:grid!important;position:relative!important;flex:0 0 78px!important;width:100%!important;height:78px!important;min-height:78px!important;max-height:78px!important;box-sizing:border-box!important;grid-template-columns:minmax(126px,156px) minmax(0,1fr)!important;align-items:stretch!important;gap:10px!important;margin:0!important;padding:6px 9px!important;overflow:hidden!important;border:1px solid rgba(201,164,92,.34)!important;border-radius:8px!important;background:linear-gradient(100deg,rgba(201,164,92,.08),rgba(12,15,19,.28) 55%),#0d1116!important}
+.acl-live-sponsors-compact-heading{display:flex!important;align-items:center!important;gap:8px!important;min-width:0!important;align-self:center!important;overflow:hidden!important}
+.acl-live-sponsors-compact-heading .acl-live-sponsors-brand-chip{width:30px!important;height:30px!important;flex:0 0 30px!important;font-size:12px!important}
+.acl-live-sponsors-compact-heading>div{display:flex!important;flex-direction:column!important;gap:3px!important;min-width:0!important}
+.acl-live-sponsors-compact-heading>div>strong{font:900 9px/1.15 var(--font-display)!important;color:#eee6d4!important;white-space:normal!important}
+.acl-live-sponsors-compact-heading>div>small{font-size:8px!important;line-height:1.25!important;color:#c4ad72!important;white-space:normal!important;overflow-wrap:anywhere!important;max-width:none!important}
+.acl-live-sponsors-compact-heading>div>em{font-style:normal!important;font-size:7px!important;line-height:1.2!important;color:#8e98a3!important}
+.acl-live-sponsors-compact-body{display:grid!important;grid-template-rows:minmax(0,1fr) 22px!important;gap:3px!important;height:100%!important;min-width:0!important;min-height:0!important;overflow:hidden!important}
+.acl-live-sponsors-compact-body.has-no-supporters{grid-template-rows:minmax(0,1fr)!important}
+.acl-live-sponsors-master-area{display:grid!important;grid-template-rows:9px minmax(0,1fr)!important;gap:3px!important;min-width:0!important;min-height:0!important;overflow:hidden!important}
+.acl-live-sponsors-row-label{display:flex!important;align-items:center!important;justify-content:space-between!important;gap:8px!important;min-width:0!important;overflow:hidden!important}
+.acl-live-sponsors-row-label strong{font-size:7px!important;line-height:1!important;letter-spacing:.08em!important;color:#e5cb85!important;white-space:nowrap!important}
+.acl-live-sponsors-row-label small{font-size:6px!important;line-height:1!important;color:#84909c!important;white-space:nowrap!important}
+.acl-live-sponsors-master-grid{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;grid-auto-rows:minmax(0,1fr)!important;align-items:stretch!important;gap:5px!important;min-width:0!important;min-height:0!important;overflow:hidden!important}
+.acl-live-sponsor-tile{display:flex!important;align-items:center!important;gap:7px!important;height:100%!important;min-width:0!important;min-height:0!important;padding:3px 6px!important;overflow:hidden!important;border:1px solid rgba(201,164,92,.22)!important;border-radius:5px!important;background:linear-gradient(100deg,rgba(201,164,92,.06),rgba(255,255,255,.025))!important;color:#f2efe7!important;text-decoration:none!important}
+.acl-live-sponsor-compact-logo{display:grid!important;place-items:center!important;flex:0 0 44px!important;width:44px!important;height:36px!important;min-width:44px!important;min-height:0!important;padding:3px!important;overflow:hidden!important;border:1px solid rgba(201,164,92,.2)!important;border-radius:4px!important;background:#e9e5da!important}
+.acl-live-sponsor-compact-logo img{display:block!important;width:100%!important;height:100%!important;max-width:100%!important;max-height:100%!important;object-fit:contain!important}
+.acl-live-sponsor-compact-monogram{display:grid!important;place-items:center!important;color:#24231f!important;font:950 13px/1 var(--font-display)!important;text-align:center!important;overflow-wrap:anywhere!important}
+.acl-live-sponsor-compact-meta{display:flex!important;flex:1 1 auto!important;flex-direction:column!important;justify-content:center!important;gap:3px!important;min-width:0!important;overflow:hidden!important}
+.acl-live-sponsor-compact-meta strong{display:block!important;color:#f5f0e4!important;font:850 9px/1.15 var(--font-display)!important;white-space:normal!important;overflow-wrap:anywhere!important;overflow:hidden!important}
+.acl-live-sponsor-compact-meta em{display:block!important;color:#c9ad6c!important;font-size:6px!important;font-style:normal!important;font-weight:850!important;line-height:1.1!important;letter-spacing:.08em!important;white-space:nowrap!important}
+.acl-live-sponsors-support-area{display:grid!important;grid-template-columns:96px minmax(0,1fr)!important;align-items:center!important;gap:6px!important;min-width:0!important;min-height:0!important;padding-top:3px!important;overflow:hidden!important;border-top:1px solid rgba(201,164,92,.13)!important}
+.acl-live-supporters-label{font-size:6px!important;line-height:1.1!important;font-weight:950!important;letter-spacing:.06em!important;color:#aa9a70!important;white-space:normal!important}
+.acl-live-supporters-grid{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;align-items:center!important;gap:4px!important;min-width:0!important;min-height:0!important;overflow:hidden!important}
+.acl-live-supporter-pill{display:flex!important;align-items:center!important;gap:4px!important;height:18px!important;min-width:0!important;padding:2px 4px!important;overflow:hidden!important;border:1px solid rgba(255,255,255,.09)!important;border-radius:4px!important;background:rgba(255,255,255,.025)!important;color:#cbd2da!important;text-decoration:none!important}
+.acl-live-supporter-logo{display:grid!important;place-items:center!important;flex:0 0 17px!important;width:17px!important;height:14px!important;min-width:17px!important;overflow:hidden!important;padding:1px!important;border-radius:2px!important;background:#e9e5da!important;color:#24231f!important;font-size:7px!important;font-weight:950!important}
+.acl-live-supporter-logo img{display:block!important;width:100%!important;height:100%!important;object-fit:contain!important}
+.acl-live-supporter-pill strong{display:block!important;min-width:0!important;overflow:hidden!important;color:#cbd2da!important;font-size:7px!important;line-height:1.1!important;font-weight:800!important;text-overflow:ellipsis!important;white-space:nowrap!important}
+.acl-live-sponsors-empty-compact{display:flex!important;align-items:center!important;gap:8px!important;min-width:0!important;color:#909aa5!important;font-size:9px!important}
+.acl-live-sponsors-empty-compact strong{color:#e2ca8e!important;white-space:nowrap!important;font:900 9px var(--font-display)!important}
+.acl-live-sponsors-empty-compact span{overflow:hidden!important;text-overflow:ellipsis!important;white-space:nowrap!important}
+.acl-live-sponsor-tile.is-cycle-hidden,.acl-live-supporter-pill.is-cycle-hidden{display:none!important}
+.acl-live-sponsor-compact-logo [hidden],.acl-live-supporter-logo [hidden]{display:none!important}
+.acl-live-supporter-logo>span:not([hidden]){display:grid!important;place-items:center!important;width:100%!important;height:100%!important;color:#24231f!important;font-size:7px!important;font-weight:950!important}
+/* Full current commentary: actual play-by-play text, with no clamp or internal scrollbar. */
+.modal.live-modal .live-commentary-column{min-width:0!important;min-height:0!important;overflow:hidden!important}
+.modal.live-modal .live-commentary-compact{display:grid!important;grid-template-columns:96px minmax(0,1fr)!important;align-items:start!important;gap:12px!important;flex:0 0 auto!important;min-width:0!important;min-height:88px!important;max-height:none!important;height:auto!important;margin:0!important;padding:12px 14px!important;overflow:visible!important;border-radius:9px!important}
+.modal.live-modal .live-commentary-compact-head{display:flex!important;flex-direction:column!important;gap:6px!important;min-width:0!important;min-height:0!important;padding-right:10px!important;border-right:1px solid rgba(255,255,255,.1)!important}
+.modal.live-modal .live-commentary-compact-kicker{font-size:9px!important;line-height:1.25!important;white-space:normal!important;color:#ead08c!important}
+.modal.live-modal .live-commentary-compact-clock{font-size:11px!important;line-height:1.25!important;color:#aab7c5!important}
+.modal.live-modal .live-commentary-compact-copy{display:grid!important;gap:6px!important;min-width:0!important;overflow:visible!important}
+.modal.live-modal .live-commentary-compact-actor{font-size:9px!important;line-height:1.35!important;letter-spacing:.07em!important;margin:0!important}
+.modal.live-modal .live-commentary-compact-text{display:block!important;-webkit-box-orient:initial!important;-webkit-line-clamp:unset!important;overflow:visible!important;max-height:none!important;height:auto!important;margin:0!important;color:#f0f3f6!important;font-size:13px!important;font-weight:500!important;line-height:1.55!important;overflow-wrap:anywhere!important;white-space:normal!important}
+.modal.live-modal .live-secondary-drawers{flex:0 0 auto!important;min-height:0!important;overflow:visible!important}
+.modal.live-modal .live-commentary-drawer .live-feed{max-height:min(30vh,330px)!important;overflow:auto!important}
+@media(max-height:850px) and (min-width:901px){
+ .acl-live-sponsors-compact{flex-basis:72px!important;height:72px!important;min-height:72px!important;max-height:72px!important}
+ .acl-live-sponsors-compact-body{grid-template-rows:minmax(0,1fr) 19px!important}
+ .acl-live-sponsors-support-area{grid-template-columns:90px minmax(0,1fr)!important}
+ .acl-live-supporter-pill{height:16px!important}
+ .acl-live-sponsor-compact-logo{height:32px!important}
+ .modal.live-modal .live-commentary-compact{min-height:76px!important;padding:9px 11px!important}
+ .modal.live-modal .live-commentary-compact-text{font-size:12px!important;line-height:1.48!important}
+}
+@media(max-width:900px){
+ .acl-live-sponsors-compact{display:grid!important;flex-basis:64px!important;height:64px!important;min-height:64px!important;max-height:64px!important;grid-template-columns:minmax(104px,126px) minmax(0,1fr)!important;gap:7px!important;padding:5px 7px!important}
+ .acl-live-sponsors-compact-body{grid-template-rows:minmax(0,1fr) 17px!important;gap:2px!important}
+ .acl-live-sponsors-compact-body.has-no-supporters{grid-template-rows:minmax(0,1fr)!important}
+ .acl-live-sponsors-master-area{grid-template-rows:8px minmax(0,1fr)!important;gap:2px!important}
+ .acl-live-sponsors-row-label strong{font-size:6px!important}
+ .acl-live-sponsors-row-label small{font-size:5px!important}
+ .acl-live-sponsors-master-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:3px!important}
+ .acl-live-sponsor-tile{gap:4px!important;padding:2px 3px!important}
+ .acl-live-sponsor-compact-logo{width:30px!important;min-width:30px!important;flex-basis:30px!important;height:27px!important;padding:2px!important}
+ .acl-live-sponsor-compact-meta strong{font-size:7px!important}
+ .acl-live-sponsor-compact-meta em{font-size:5px!important}
+ .acl-live-sponsors-support-area{grid-template-columns:78px minmax(0,1fr)!important;gap:3px!important;padding-top:2px!important}
+ .acl-live-supporters-label{font-size:5px!important}
+ .acl-live-supporters-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:2px!important}
+ .acl-live-supporter-pill{height:14px!important;padding:1px 2px!important;gap:2px!important}
+ .acl-live-supporter-logo{width:12px!important;min-width:12px!important;flex-basis:12px!important;height:11px!important}
+ .acl-live-supporter-pill strong{font-size:5px!important}
+ .modal.live-modal .live-commentary-compact{grid-template-columns:80px minmax(0,1fr)!important;min-height:70px!important;padding:8px 9px!important;gap:8px!important}
+ .modal.live-modal .live-commentary-compact-text{font-size:12px!important;line-height:1.45!important}
+}
+@media(max-width:600px){
+ .acl-live-sponsors-compact{height:76px!important;min-height:76px!important;max-height:76px!important;flex-basis:76px!important;grid-template-columns:88px minmax(0,1fr)!important;padding:4px 5px!important;gap:5px!important}
+ .acl-live-sponsors-compact-heading .acl-live-sponsors-brand-chip{width:22px!important;height:22px!important;flex-basis:22px!important;font-size:9px!important}
+ .acl-live-sponsors-compact-heading>div>strong{font-size:6px!important}
+ .acl-live-sponsors-compact-heading>div>small{font-size:6px!important}
+ .acl-live-sponsors-compact-heading>div>em{font-size:5px!important}
+ .acl-live-sponsors-master-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+ .acl-live-sponsors-row-label small{display:none!important}
+ .acl-live-sponsors-support-area{display:grid!important;grid-template-columns:72px minmax(0,1fr)!important;gap:3px!important;padding-top:2px!important}
+ .acl-live-supporters-label{font-size:5px!important}
+ .acl-live-supporters-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:2px!important}
+ .acl-live-supporter-pill{height:14px!important;padding:1px 2px!important;gap:2px!important}
+ .acl-live-supporter-logo{width:12px!important;min-width:12px!important;flex-basis:12px!important;height:11px!important}
+ .acl-live-supporter-pill strong{font-size:5px!important}
+ .acl-live-sponsors-compact-body{grid-template-rows:minmax(0,1fr) 17px!important}
+ .acl-live-sponsors-compact-body.has-no-supporters{grid-template-rows:minmax(0,1fr)!important}
+ .acl-live-sponsor-tile:nth-child(n+3){display:none!important}
+ .modal.live-modal .live-commentary-compact{grid-template-columns:1fr!important;gap:6px!important}
+ .modal.live-modal .live-commentary-compact-head{flex-direction:row!important;justify-content:space-between!important;border:0!important;padding:0!important}
+ .modal.live-modal .live-commentary-compact-text{font-size:12px!important;line-height:1.5!important}
+}
+</style>
+
 </head>
 <body>
 <div class="shell">
@@ -3999,45 +4100,13 @@ function updateLiveResultSpotlight(live){const content=liveResultSpotlightCardHT
 function liveBeatHTML(beat){const kind=(beat.kind==='finish'?'finish':(beat.kind==='round'||beat.kind==='round-start')?'round':'');const marker=beat.kind==='round'?'GONGO':beat.kind==='round-start'?'VOLTA AO ROUND':beat.kind==='finish'?'RESULTADO':'AO VIVO';const actor=beat.actorName?`<span class="live-beat-actor ${beat.actorSide==='a'?'red':beat.actorSide==='b'?'blue':''}">${beat.actorSide==='a'?'🔴':beat.actorSide==='b'?'🔵':'•'} ${esc(beat.actorName)}</span>`:'';return `<article class="live-beat ${kind}" data-live-beat="${beat.elapsedSec}"><div class="live-beat-time">R${beat.round} · ${esc(beat.clock)}<small>${marker}</small></div><div>${actor}<p>${esc(beat.text)}</p></div></article>`;}
 function liveCompactNarrationText(live,beat){
  if(!beat)return 'A luta está prestes a começar. Os atletas medem a distância no centro do octógono.';
- const {a,b}=liveFightContext(live),impact=beat.impact||{},side=beat.actorSide||(String(beat.move||'').match(/^([ab])-/)||[])[1]||null;
- const actor=side?(side==='a'?a:b):null,target=side?(side==='a'?b:a):null;
- const an=actor?nameWithNick(actor):(beat.actorName||'Os atletas'),tn=target?nameWithNick(target):'';
+ const text=String(beat.text||beat.commentary||'').replace(/\s+/g,' ').trim();
+ if(text)return text;
+ const {a,b}=liveFightContext(live);
  if(beat.kind==='opening')return `Começou! ${nameWithNick(a)} e ${nameWithNick(b)} iniciam a disputa.`;
  if(beat.kind==='round-start')return `Round ${Number(beat.round)||1} começou. Os atletas retomam a ação.`;
  if(beat.kind==='round')return `Fim do round ${Number(beat.round)||1}. Os lutadores seguem para os corners.`;
- if(beat.kind==='finish'){
-  const outcome=live.terminalResult,plan=liveOutcomePlan&&liveOutcomePlan.liveId===live.id?liveOutcomePlan.result:null;
-  const result=outcome||plan||liveFightContext(live).f?.result;
-  const winner=result?.winnerId?byId(result.winnerId):null;
-  if(result&&isJudgesDecision(result))return 'Fim dos rounds! Os cartões dos juízes vão definir o resultado.';
-  if(winner&&/submission|finaliza/i.test(String(result?.method||'')))return `${nameWithNick(winner)} encerra a luta por finalização.`;
-  if(winner&&/ko|tko|nocaute/i.test(String(result?.method||'')))return `${nameWithNick(winner)} vence por ${String(result.method).toUpperCase()}.`;
-  if(winner)return `${nameWithNick(winner)} é anunciado vencedor. Resultado oficial em destaque.`;
-  return 'Combate encerrado. O resultado oficial está sendo confirmado.';
- }
- if(impact.type==='takedown')return Number(impact.landed)>0?`${an} confirma a queda e leva ${tn||'o adversário'} ao solo.`:`${an} tenta a queda, mas ${tn||'o adversário'} defende.`;
- if(impact.type==='submission')return Number(impact.landed)>0?`${an} consegue a finalização. A luta acabou!`:`${an} ameaça a finalização; ${tn||'o adversário'} ainda consegue defender.`;
- if(impact.type==='strike'){
-  const region={head:'na cabeça',body:'no corpo',legs:'na perna'}[impact.region]||'no alvo';
-  const move=liveActionLabel(beat.move,impact).replace(/ · .*/, '').toLowerCase();
-  if(Number(impact.landed)>0){let line=`${an} conecta ${move} ${region}${tn?' em '+tn:''}.`;if(impact.knockdown)line+=` ${tn||'O adversário'} cai!`;if(impact.finish)line+=' O árbitro interrompe a luta!';return line;}
-  return `${an} tenta ${move}, mas ${tn||'o adversário'} evita o golpe limpo.`;
- }
- const mv=String(beat.move||'');
- if(mv.includes('ground-pass'))return `${an} avança a posição no solo e tenta passar a guarda.`;
- if(mv.includes('ground-strike'))return `${an} trabalha golpes curtos por cima; ${tn||'o adversário'} protege a guarda.`;
- if(mv.includes('getup'))return `${an} procura espaço para se levantar e voltar à luta em pé.`;
- if(mv==='clinch')return 'Os atletas entram no clinch e disputam o controle junto à grade.';
- if(mv==='break-clinch')return `${tn||'Um dos atletas'} abre espaço e rompe o clinch.`;
- if(mv==='scramble')return 'Disputa de posição no solo — os dois tentam conquistar a posição dominante.';
- if(mv==='decision-score')return String(beat.text||'Os juízes apresentam suas pontuações.').replace(/\s+/g,' ').slice(0,145);
- if(mv==='decision-winner')return String(beat.text||'Resultado por decisão anunciado.').replace(/\s+/g,' ').slice(0,145);
- let text=String(impact.commentary||beat.text||'Os atletas seguem trocando golpes e buscando uma abertura.').replace(/\s+/g,' ').trim();
- // Compact the automatic play-by-play at sentence boundaries instead of showing long paragraphs.
- const sentences=text.match(/[^.!?]+[.!?]?/g)||[text];
- text=sentences.slice(0,2).join(' ').trim();
- if(text.length>185)text=text.slice(0,181).replace(/\s+\S*$/,'')+'…';
- return text;
+ return 'Os atletas seguem trocando golpes e buscando uma abertura.';
 }
 function liveCompactNarrationHTML(live,beat){
  const {a,b}=liveFightContext(live);const text=liveCompactNarrationText(live,beat);
@@ -4146,14 +4215,14 @@ function aclSponsorBatchSizeForZone(zone){
  return 3;
 }
 function aclLiveSponsorTileHTML(item,index,zone,hidden=false){
- const logo=aclSponsorLogo(item),name=String(item?.name||'Parceiro ACL'),href=aclSafeHttpUrl(item?.website),mark=logo?`<img src="${esc(logo)}" alt="" loading="lazy" referrerpolicy="no-referrer">`:`<span class="acl-live-sponsor-compact-monogram">${esc(aclDisplayInitials(name))}</span>`;
+ const logo=aclSponsorLogo(item),name=String(item?.name||'Parceiro ACL'),href=aclSafeHttpUrl(item?.website),mark=logo?`<img src="${esc(logo)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="acl-live-sponsor-compact-monogram" hidden>${esc(aclDisplayInitials(name))}</span>`:`<span class="acl-live-sponsor-compact-monogram">${esc(aclDisplayInitials(name))}</span>`;
  const inner=`<span class="acl-live-sponsor-compact-logo">${mark}</span><span class="acl-live-sponsor-compact-meta"><strong>${esc(name)}</strong><em>${aclIsMasterSponsor(item)?'MASTER':'PARCEIRO OFICIAL'}</em></span>`;
  const cls=`acl-live-sponsor-tile${hidden?' is-cycle-hidden':''}`;
  const attrs=`class="${cls}" data-acl-sponsor-zone="${esc(zone)}" data-acl-sponsor-index="${Number(index)||0}" title="${esc(String(item?.description||name))}"`;
  return href?`<a ${attrs} href="${esc(href)}" target="_blank" rel="noopener noreferrer">${inner}</a>`:`<div ${attrs}>${inner}</div>`;
 }
 function aclLiveSupporterPillHTML(item,index,zone,hidden=false){
- const logo=aclSponsorLogo(item),name=String(item?.name||'Parceiro ACL'),href=aclSafeHttpUrl(item?.website),mark=logo?`<img src="${esc(logo)}" alt="" loading="lazy" referrerpolicy="no-referrer">`:`<span>${esc(aclDisplayInitials(name))}</span>`;
+ const logo=aclSponsorLogo(item),name=String(item?.name||'Parceiro ACL'),href=aclSafeHttpUrl(item?.website),mark=logo?`<img src="${esc(logo)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span hidden>${esc(aclDisplayInitials(name))}</span>`:`<span>${esc(aclDisplayInitials(name))}</span>`;
  const inner=`<span class="acl-live-supporter-logo">${mark}</span><strong>${esc(name)}</strong>`;
  const attrs=`class="acl-live-supporter-pill${hidden?' is-cycle-hidden':''}" data-acl-sponsor-zone="${esc(zone)}" data-acl-sponsor-index="${Number(index)||0}" title="${esc(String(item?.description||name))}"`;
  return href?`<a ${attrs} href="${esc(href)}" target="_blank" rel="noopener noreferrer">${inner}</a>`:`<div ${attrs}>${inner}</div>`;
@@ -4166,10 +4235,11 @@ function aclSponsorBroadcastStripHTML(event=null,live=null){
  const mainBatch=aclSponsorBatchSizeForZone('live-master'),supportBatch=aclSponsorBatchSizeForZone('live-supporter');
  const mainGroup=aclSponsorCycleGroup(main.length,mainBatch,elapsed,period,6),supportGroup=aclSponsorCycleGroup(secondary.length,supportBatch,elapsed,period,5);
  const mainCards=main.map((item,i)=>aclLiveSponsorTileHTML(item,i,'live-master',aclSponsorCycleHidden(i,mainBatch,mainGroup))).join('');
- const supporting=secondary.length?secondary.map((item,i)=>aclLiveSupporterPillHTML(item,i,'live-supporter',aclSponsorCycleHidden(i,supportBatch,supportGroup))).join(''):`<div class="acl-live-supporters-empty">${masters.length?'Os patrocinadores Master oficiais da ACL.':'Aguardando parceiros oficiais.'}</div>`;
  const mainLabel=masters.length?'PATROCINADORES MASTER':'PARCEIROS OFICIAIS';
- const mainGrid=main.length?`<div class="acl-live-sponsors-master-grid" aria-label="${esc(mainLabel)}">${mainCards}</div>`:`<div class="acl-live-sponsors-empty-compact"><strong>PARCEIROS OFICIAIS</strong><span>Espaço reservado às marcas que apoiam a ACL.</span></div>`;
- return `<section class="acl-live-sponsors acl-live-sponsors-compact" aria-label="Patrocinadores oficiais da transmissão"><div class="acl-live-sponsors-compact-heading"><span class="acl-live-sponsors-brand-chip">ACL</span><div><strong>${esc(mainLabel)}</strong><small>${esc(eventName)}</small><em>${main.length} marca(s) · mesma cota visual</em></div></div><div class="acl-live-sponsors-compact-body"><div class="acl-live-sponsors-master-area"><div class="acl-live-sponsors-row-label"><strong>${esc(mainLabel)}</strong><small>${main.length>mainBatch?'EXIBIÇÃO ROTATIVA · SEM ROLAGEM':'MESMO TAMANHO PARA TODOS'}</small></div>${mainGrid}</div><div class="acl-live-sponsors-support-area"><span class="acl-live-supporters-label">TAMBÉM APOIAM A ACL</span><div class="acl-live-supporters-grid">${supporting}</div></div></div></section>`;
+ const mainGrid=main.length?`<div class="acl-live-sponsors-master-grid" aria-label="${esc(mainLabel)}">${mainCards}</div>`:`<div class="acl-live-sponsors-empty-compact"><strong>PARCEIROS OFICIAIS</strong><span>As marcas parceiras da ACL serão apresentadas aqui.</span></div>`;
+ const supportArea=secondary.length?`<div class="acl-live-sponsors-support-area"><span class="acl-live-supporters-label">TAMBÉM APOIAM A ACL</span><div class="acl-live-supporters-grid">${secondary.map((item,i)=>aclLiveSupporterPillHTML(item,i,'live-supporter',aclSponsorCycleHidden(i,supportBatch,supportGroup))).join('')}</div></div>`:'';
+ const noSupportClass=secondary.length?'':' has-no-supporters';
+ return `<section class="acl-live-sponsors acl-live-sponsors-compact" aria-label="Patrocinadores oficiais da transmissão"><div class="acl-live-sponsors-compact-heading"><span class="acl-live-sponsors-brand-chip">ACL</span><div><strong>${esc(mainLabel)}</strong><small>${esc(eventName)}</small><em>${main.length} marca(s) · mesma cota visual</em></div></div><div class="acl-live-sponsors-compact-body${noSupportClass}"><div class="acl-live-sponsors-master-area"><div class="acl-live-sponsors-row-label"><strong>${esc(mainLabel)}</strong><small>${main.length>mainBatch?'EXIBIÇÃO ROTATIVA':'DESTAQUE IGUAL PARA TODOS'}</small></div>${mainGrid}</div>${supportArea}</div></section>`;
 }
 function aclCommercialBreakStageHTML(event,live,period,elapsed){
  const all=aclSortSponsors((Array.isArray(state.sponsors)?state.sponsors:[]).filter(x=>x.active!==false)),masters=all.filter(aclIsMasterSponsor),supporters=all.filter(x=>!aclIsMasterSponsor(x));
@@ -4332,7 +4402,7 @@ function liveSimulationHTML(live){
    ${finished?'':liveLiveStatsHTML(live,a,b)}
    ${liveCompactNarrationHTML(live,lastBeat)}
    ${aclFanScorecardHTML(live)}
-   <div class="live-secondary-drawers"><details class="live-commentary-drawer"><summary><span><strong>Ver narração completa</strong><small>Golpes, defesas e mudanças de posição</small></span><span class="live-drawer-count" data-live-beat-count>${beats.length} registros</span></summary><div class="live-feed" id="liveNarrationFeed">${beats.map(liveBeatHTML).join('')}</div></details><details class="live-commentary-drawer"><summary><span><strong>Estatísticas e corners</strong><small>Dados técnicos e ajustes táticos</small></span><span class="live-drawer-chevron">＋</span></summary><div class="live-detail-inner">${liveCornerAdviceHTML(live)}<div class="panel-head"><div><h3>Estatísticas da luta</h3><p>Conectados/tentativas, quedas, controle e finalizações.</p></div></div>${liveStatsTableHTML(live.stats,a,b)}</div></details></div>
+   <div class="live-secondary-drawers"><details class="live-commentary-drawer"><summary><span><strong>Histórico de lances</strong><small>Registros anteriores da transmissão</small></span><span class="live-drawer-count" data-live-beat-count>${beats.length} registros</span></summary><div class="live-feed" id="liveNarrationFeed">${beats.map(liveBeatHTML).join('')}</div></details><details class="live-commentary-drawer"><summary><span><strong>Estatísticas e corners</strong><small>Dados técnicos e ajustes táticos</small></span><span class="live-drawer-chevron">＋</span></summary><div class="live-detail-inner">${liveCornerAdviceHTML(live)}<div class="panel-head"><div><h3>Estatísticas da luta</h3><p>Conectados/tentativas, quedas, controle e finalizações.</p></div></div>${liveStatsTableHTML(live.stats,a,b)}</div></details></div>
   </aside>
  </div>${liveResultSpotlightHTML(live)}</div>`;
 }
